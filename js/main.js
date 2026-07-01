@@ -1,10 +1,111 @@
-const toggle = document.getElementById('menuToggle');
-const nav = document.getElementById('nav');
+;(() => {
+  const toggle = document.getElementById('menuToggle')
+  const nav = document.getElementById('nav')
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => nav.classList.toggle('open'))
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('open'))
+    })
+  }
 
-toggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
-});
+  const canvas = document.getElementById('networkCanvas')
+  if (!canvas) return
+  const ctx = canvas.getContext('2d')
+  let w, h, particles, mouse
 
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
-});
+  function resize() {
+    w = canvas.width = window.innerWidth
+    h = canvas.height = window.innerHeight
+  }
+  window.addEventListener('resize', resize)
+  resize()
+
+  mouse = { x: w / 2, y: h / 2, radius: 120 }
+
+  document.addEventListener('mousemove', e => {
+    mouse.x = e.clientX
+    mouse.y = e.clientY
+  })
+
+  const COUNT = 70
+  particles = []
+
+  for (let i = 0; i < COUNT; i++) {
+    particles.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      r: Math.random() * 1.5 + 0.5
+    })
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h)
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i]
+
+      const dx = p.x - mouse.x
+      const dy = p.y - mouse.y
+      const dist = Math.sqrt(dx * dx + dy * dy)
+      if (dist < mouse.radius) {
+        const force = (mouse.radius - dist) / mouse.radius
+        p.vx += (dx / dist) * force * 0.3
+        p.vy += (dy / dist) * force * 0.3
+      }
+
+      p.vx *= 0.98
+      p.vy *= 0.98
+      p.x += p.vx
+      p.y += p.vy
+
+      if (p.x < 0) p.x = w
+      if (p.x > w) p.x = 0
+      if (p.y < 0) p.y = h
+      if (p.y > h) p.y = 0
+
+      ctx.beginPath()
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+      ctx.fillStyle = 'rgba(99, 102, 241, 0.3)'
+      ctx.fill()
+
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j]
+        const dx2 = p.x - p2.x
+        const dy2 = p.y - p2.y
+        const dist2 = Math.sqrt(dx2 * dx2 + dy2 * dy2)
+        if (dist2 < 150) {
+          ctx.beginPath()
+          ctx.moveTo(p.x, p.y)
+          ctx.lineTo(p2.x, p2.y)
+          ctx.strokeStyle = `rgba(99, 102, 241, ${(1 - dist2 / 150) * 0.15})`
+          ctx.lineWidth = 0.5
+          ctx.stroke()
+        }
+      }
+    }
+
+    requestAnimationFrame(draw)
+  }
+
+  draw()
+
+  const revealEls = document.querySelectorAll('.reveal')
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    )
+    revealEls.forEach(el => observer.observe(el))
+  } else {
+    revealEls.forEach(el => el.classList.add('active'))
+  }
+})()

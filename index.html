@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Einier Freyre – Cloud & Platform Engineering</title>
   <meta name="description" content="Automatizo plataformas e infraestructuras Cloud para que tu equipo entregue más rápido y escale con menos fricción." />
-  <link rel="stylesheet" href="/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
+
+  <canvas id="networkCanvas"></canvas>
+  <div class="noise-overlay"></div>
+
   <header class="header">
     <div class="container header-inner">
       <a href="/" class="logo">EF</a>
@@ -44,13 +49,15 @@
 
   <section id="about" class="section section-alt">
     <div class="container about-content">
-      <h2 class="section-label">Sobre mí</h2>
-      <p class="about-text-lg">
-        Ayudo a pequeñas y medianas empresas a automatizar sus plataformas y mejorar su
-        infraestructura Cloud mediante prácticas de <strong>Platform Engineering</strong> y
-        <strong>DevOps</strong>.
-      </p>
-      <div class="about-grid">
+      <div class="reveal">
+        <h2 class="section-label">Sobre mí</h2>
+        <p class="about-text-lg">
+          Ayudo a pequeñas y medianas empresas a automatizar sus plataformas y mejorar su
+          infraestructura Cloud mediante prácticas de <strong>Platform Engineering</strong> y
+          <strong>DevOps</strong>.
+        </p>
+      </div>
+      <div class="about-grid reveal reveal-delay-1">
         <div class="about-item">
           <span class="about-num">6+</span>
           <span class="about-desc">años construyendo sistemas distribuidos</span>
@@ -73,37 +80,39 @@
 
   <section id="problems" class="section">
     <div class="container">
-      <h2 class="section-label">Problemas que resuelvo</h2>
-      <p class="section-desc">
-        Muchos clientes no saben que necesitan DevOps. Estos son los síntomas:
-      </p>
+      <div class="reveal">
+        <h2 class="section-label">Problemas que resuelvo</h2>
+        <p class="section-desc">
+          Muchos clientes no saben que necesitan DevOps. Estos son los síntomas:
+        </p>
+      </div>
       <div class="problems-grid">
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-1">
           <span class="problem-icon">01</span>
           <h3>Despliegues lentos</h3>
           <p>Deployar toma horas o días. El proceso es manual, propenso a errores y nadie quiere hacerlo.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-2">
           <span class="problem-icon">02</span>
           <h3>Tareas manuales repetitivas</h3>
           <p>Tu equipo pierde tiempo configurando servidores, actualizando dependencias y apagando incendios.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-3">
           <span class="problem-icon">03</span>
           <h3>Costos Cloud sin control</h3>
           <p>La factura crece cada mes y nadie sabe exactamente por qué. Recursos infrautilizados y sin visibilidad.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-2">
           <span class="problem-icon">04</span>
           <h3>Infraestructura invisible</h3>
           <p>Nadie entiende completamente la infraestructura. Documentación inexistente, configuración dispersa.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-3">
           <span class="problem-icon">05</span>
           <h3>Miedo a desplegar</h3>
           <p>Da miedo hacer deploy en producción. No hay rollbacks confiables, no hay tests, no hay confianza.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-4">
           <span class="problem-icon">06</span>
           <h3>Equipo atascado en operaciones</h3>
           <p>El equipo técnico pasa más tiempo operando que construyendo. El progreso se siente lento.</p>
@@ -114,23 +123,25 @@
 
   <section id="services" class="section section-alt">
     <div class="container">
-      <h2 class="section-label">Servicios</h2>
+      <div class="reveal">
+        <h2 class="section-label">Servicios</h2>
+      </div>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card reveal reveal-delay-1">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/></svg>
           </div>
           <h3>Auditoría Cloud</h3>
           <p>Revisión completa de tu infraestructura, identificación de riesgos, fugas de costos y recomendaciones accionables.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal reveal-delay-2">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7V17C4 18.1046 4.89543 19 6 19H18C19.1046 19 20 18.1046 20 17V7M4 7L12 13L20 7M4 7C4 5.89543 4.89543 5 6 5H18C19.1046 5 20 5.89543 20 7"/></svg>
           </div>
           <h3>Implementación DevOps</h3>
           <p>CI/CD, automatización, observabilidad, contenedores y Kubernetes. Tu equipo deploya con confianza y en minutos.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal reveal-delay-3">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12H15M9 16H15M9 8H15M7 3H17C18.1046 3 19 3.89543 19 5V21L12 18L5 21V5C5 3.89543 5.89543 3 7 3Z"/></svg>
           </div>
@@ -143,8 +154,10 @@
 
   <section id="process" class="section">
     <div class="container">
-      <h2 class="section-label">Cómo trabajo</h2>
-      <div class="process-steps">
+      <div class="reveal">
+        <h2 class="section-label">Cómo trabajo</h2>
+      </div>
+      <div class="process-steps reveal reveal-delay-1">
         <div class="step">
           <span class="step-num">1</span>
           <h3>Conversación inicial</h3>
@@ -176,11 +189,13 @@
 
   <section id="contact" class="section section-alt">
     <div class="container contact-content">
-      <h2 class="section-label">Contacto</h2>
-      <p class="contact-text">
-        Cuéntame qué necesitas y te preparo una propuesta a medida.
-        La conversación inicial es gratis y sin compromiso.
-      </p>
+      <div class="reveal">
+        <h2 class="section-label">Contacto</h2>
+        <p class="contact-text">
+          Cuéntame qué necesitas y te preparo una propuesta a medida.
+          La conversación inicial es gratis y sin compromiso.
+        </p>
+      </div>
       <a href="mailto:freyre.dev@gmail.com?subject=Consulta%20desde%20freyre.dev&body=Hola%20Einier%2C%0A%0AMi%20nombre%20es%20...%0AEmpresa%3A%20...%0A%0A%C2%BFQu%C3%A9%20problema%20necesito%20resolver%3F%0A..." class="btn btn-primary btn-large">Enviar mensaje</a>
       <div class="contact-links">
         <a href="mailto:freyre.dev@gmail.com" class="contact-link">freyre.dev@gmail.com</a>

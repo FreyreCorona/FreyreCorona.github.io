@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog – Einier Freyre</title>
   <meta name="description" content="Artículos sobre Platform Engineering, Cloud Infrastructure y DevOps." />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
+
+  <canvas id="networkCanvas"></canvas>
+  <div class="noise-overlay"></div>
+
   <header class="header">
     <div class="container header-inner">
       <a href="/" class="logo">EF</a>
@@ -26,25 +32,27 @@
 
   <section class="hero" style="min-height:auto;padding:120px 0 60px">
     <div class="container" style="max-width:720px">
-      <h2 class="section-label">Blog</h2>
-      <h1 class="hero-title" style="font-size:clamp(32px,5vw,48px)">Platform Engineering<br /><span class="gradient-text">Notas e Insights</span></h1>
-      <p class="hero-subtitle">Artículos sobre Cloud Infrastructure, DevOps, Kubernetes y automatización de plataformas.</p>
+      <div class="reveal">
+        <h2 class="section-label">Blog</h2>
+        <h1 class="hero-title" style="font-size:clamp(32px,5vw,48px)">Platform Engineering<br /><span class="gradient-text">Notas e Insights</span></h1>
+        <p class="hero-subtitle">Artículos sobre Cloud Infrastructure, DevOps, Kubernetes y automatización de plataformas.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" style="padding-top:0">
     <div class="container" style="max-width:720px">
-      <div class="service-card" style="margin-bottom:16px">
+      <div class="service-card reveal reveal-delay-1" style="margin-bottom:16px">
         <h3 style="margin-bottom:4px">Building a Kubernetes Operator in Go with Kubebuilder</h3>
         <span style="font-size:12px;color:var(--text-muted)">Próximamente</span>
         <p style="margin-top:12px">Walkthrough sobre cómo crear un operador personalizado, implementar CRDs, finalizers y leader election.</p>
       </div>
-      <div class="service-card" style="margin-bottom:16px">
+      <div class="service-card reveal reveal-delay-2" style="margin-bottom:16px">
         <h3 style="margin-bottom:4px">De 5 días a 1 hora: migrando a Infrastructure as Code</h3>
         <span style="font-size:12px;color:var(--text-muted)">Próximamente</span>
         <p style="margin-top:12px">Cómo Terraform + Cloud Init transformaron nuestro provisioning y las lecciones aprendidas.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card reveal reveal-delay-3">
         <h3 style="margin-bottom:4px">Observabilidad sin presupuesto: Prometheus + Grafana para equipos pequeños</h3>
         <span style="font-size:12px;color:var(--text-muted)">Próximamente</span>
         <p style="margin-top:12px">Guía práctica para montar monitoreo en producción sin gastar de más.</p>
