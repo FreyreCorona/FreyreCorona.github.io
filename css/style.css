@@ -759,6 +759,35 @@ body {
   align-self: stretch;
 }
 
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.form-success.active {
+  display: block;
+}
+
+.form-success-icon {
+  width: 56px;
+  height: 56px;
+  color: var(--accent);
+  margin: 0 auto 20px;
+}
+
+.form-success-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.form-success-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
 .checkbox-privacy {
   display: flex;
   align-items: center;

@@ -110,6 +110,34 @@
 
   draw()
 
+  const contactForm = document.getElementById('contactForm')
+  const formSuccess = document.getElementById('formSuccess')
+  if (contactForm && formSuccess) {
+    contactForm.addEventListener('submit', async e => {
+      e.preventDefault()
+      const btn = contactForm.querySelector('button[type="submit"]')
+      const originalText = btn.textContent
+      btn.disabled = true
+      btn.textContent = 'Enviando...'
+      try {
+        const data = new FormData(contactForm)
+        data.append('_gotcha', '')
+        const res = await fetch('https://formspree.io/f/mpqgyygl', {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' }
+        })
+        if (!res.ok) throw new Error('Error')
+        contactForm.style.display = 'none'
+        formSuccess.classList.add('active')
+      } catch {
+        btn.disabled = false
+        btn.textContent = originalText
+        alert('Ocurrió un error. Intenta nuevamente o escríbeme directamente a freyre.dev@gmail.com')
+      }
+    })
+  }
+
   const revealEls = document.querySelectorAll('.reveal')
   if (revealEls.length && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(

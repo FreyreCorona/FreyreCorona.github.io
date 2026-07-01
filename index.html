@@ -274,9 +274,8 @@
           La conversación inicial es gratis y sin compromiso.
         </p>
       </div>
-      <form class="contact-form" action="https://formspree.io/f/mpqgyygl" method="POST">
+      <form class="contact-form" id="contactForm">
         <input type="hidden" name="_subject" value="Nuevo contacto desde freyre.dev" />
-        <input type="hidden" name="_next" value="https://freyre.dev/thanks.html" />
         <input type="text" name="_gotcha" style="display:none" />
         <div class="form-row">
           <input type="text" name="nombre" placeholder="Tu nombre" required />
@@ -290,6 +289,13 @@
         </label>
         <button type="submit" class="btn btn-primary btn-large">Enviar mensaje</button>
       </form>
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/></svg>
+        </div>
+        <h3 class="form-success-title">¡Mensaje enviado!</h3>
+        <p class="form-success-text">Gracias por escribirme. Te responderé a la brevedad para coordinar una conversación sin costo ni compromiso.</p>
+      </div>
       <div class="contact-links">
         <a href="mailto:freyre.dev@gmail.com" class="contact-link">freyre.dev@gmail.com</a>
         <a href="https://www.linkedin.com/in/einier-freyre-896981220/" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
