@@ -15,8 +15,13 @@
     if (saved === 'light') html.setAttribute('data-theme', 'light')
     themeToggle.addEventListener('click', () => {
       const isLight = html.hasAttribute('data-theme')
-      html.toggleAttribute('data-theme')
-      localStorage.setItem('theme', isLight ? '' : 'light')
+      if (isLight) {
+        html.removeAttribute('data-theme')
+        localStorage.setItem('theme', '')
+      } else {
+        html.setAttribute('data-theme', 'light')
+        localStorage.setItem('theme', 'light')
+      }
     })
   }
 
@@ -79,7 +84,7 @@
 
       ctx.beginPath()
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-      ctx.fillStyle = 'rgba(99, 102, 241, 0.3)'
+      ctx.fillStyle = 'rgba(99, 102, 241, 0.5)'
       ctx.fill()
 
       for (let j = i + 1; j < particles.length; j++) {
@@ -91,7 +96,7 @@
           ctx.beginPath()
           ctx.moveTo(p.x, p.y)
           ctx.lineTo(p2.x, p2.y)
-          ctx.strokeStyle = `rgba(99, 102, 241, ${(1 - dist2 / 150) * 0.15})`
+          ctx.strokeStyle = `rgba(99, 102, 241, ${(1 - dist2 / 150) * 0.3})`
           ctx.lineWidth = 0.5
           ctx.stroke()
         }

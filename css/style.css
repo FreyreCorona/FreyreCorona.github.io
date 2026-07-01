@@ -57,7 +57,7 @@ body {
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .noise-overlay {
@@ -267,48 +267,6 @@ body {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-}
-
-/* Scroll Indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.5;
-  animation: scrollFade 3s ease-in-out infinite;
-}
-
-.scroll-mouse {
-  width: 22px;
-  height: 34px;
-  border: 2px solid var(--text-muted);
-  border-radius: 11px;
-  display: flex;
-  justify-content: center;
-  padding-top: 8px;
-}
-
-.scroll-dot {
-  width: 2.5px;
-  height: 7px;
-  background: var(--text-muted);
-  border-radius: 2px;
-  animation: scrollDot 2s ease-in-out infinite;
-}
-
-@keyframes scrollDot {
-  0%, 100% { transform: translateY(0); opacity: 1; }
-  50% { transform: translateY(6px); opacity: 0.2; }
-}
-
-@keyframes scrollFade {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 0.2; }
 }
 
 /* Tech Badges */
@@ -887,32 +845,6 @@ body {
   line-height: 1.8;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .nav {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: var(--header-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    flex-direction: column;
-    padding: 32px 24px;
-    gap: 24px;
-    border-bottom: 1px solid var(--border);
-    transform: translateY(-110%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .nav.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
 /* Theme Toggle */
 .theme-toggle {
   display: flex;
@@ -941,7 +873,33 @@ body {
 [data-theme="light"] .theme-toggle .sun-icon { display: block; }
 [data-theme="light"] .theme-toggle .moon-icon { display: none; }
 
-.menu-toggle {
+/* Mobile */
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: 32px 24px;
+    gap: 24px;
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-toggle {
     display: flex;
   }
 
@@ -974,10 +932,6 @@ body {
 
   .about-item {
     padding: 16px;
-  }
-
-  .scroll-indicator {
-    display: none;
   }
 
   .testimonials-grid {
