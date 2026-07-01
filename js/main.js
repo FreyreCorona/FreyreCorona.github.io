@@ -8,6 +8,18 @@
     })
   }
 
+  const themeToggle = document.getElementById('themeToggle')
+  const html = document.documentElement
+  if (themeToggle) {
+    const saved = localStorage.getItem('theme')
+    if (saved === 'light') html.setAttribute('data-theme', 'light')
+    themeToggle.addEventListener('click', () => {
+      const isLight = html.hasAttribute('data-theme')
+      html.toggleAttribute('data-theme')
+      localStorage.setItem('theme', isLight ? '' : 'light')
+    })
+  }
+
   const canvas = document.getElementById('networkCanvas')
   if (!canvas) return
   const ctx = canvas.getContext('2d')

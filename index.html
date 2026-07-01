@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,7 @@
   <meta name="description" content="Automatizo plataformas e infraestructuras Cloud para que tu equipo entregue más rápido y escale con menos fricción." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
@@ -26,6 +27,10 @@
         <a href="/blog/" class="nav-link">Blog</a>
         <a href="#contact" class="nav-link btn-nav">Contacto</a>
       </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
       <button class="menu-toggle" id="menuToggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -40,9 +45,20 @@
         Automatizo plataformas e infraestructuras Cloud para que tu equipo entregue más rápido
         y escale con menos fricción.
       </p>
+      <div class="tech-badges">
+        <span class="tech-badge">Go</span>
+        <span class="tech-badge">Terraform</span>
+        <span class="tech-badge">Kubernetes</span>
+        <span class="tech-badge">OCI</span>
+      </div>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Hablemos</a>
         <a href="#services" class="btn btn-secondary">Ver servicios</a>
+      </div>
+      <div class="scroll-indicator">
+        <span class="scroll-mouse">
+          <span class="scroll-dot"></span>
+        </span>
       </div>
     </div>
   </section>
@@ -182,6 +198,34 @@
           <span class="step-num">5</span>
           <h3>Seguimiento</h3>
           <p>Capacitación a tu equipo y acompañamiento. La plataforma queda operativa y tu equipo autónomo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-label">Casos de Éxito</h2>
+      </div>
+      <div class="testimonials-grid reveal reveal-delay-1">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>Implementaron CI/CD en tiempo récord. Pasamos de deploys manuales de 4 horas a deploys automáticos en 15 minutos. La infraestructura ahora es tratada como código y nuestro equipo puede enfocarse en construir, no en operar.</p>
+          </div>
+          <div class="testimonial-author">
+            <span class="author-name">— Cliente 1</span>
+            <span class="author-role">CTO · Empresa de tecnología</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>La auditoría Cloud reveló fugas de costos que nadie había identificado. Optimizamos recursos, redujimos la factura en un 35% y ganamos visibilidad total de nuestra infraestructura.</p>
+          </div>
+          <div class="testimonial-author">
+            <span class="author-name">— Cliente 2</span>
+            <span class="author-role">VP of Engineering · Startup SaaS</span>
+          </div>
         </div>
       </div>
     </div>
