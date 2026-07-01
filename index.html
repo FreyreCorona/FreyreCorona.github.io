@@ -235,7 +235,17 @@
           La conversación inicial es gratis y sin compromiso.
         </p>
       </div>
-      <a href="mailto:freyre.dev@gmail.com?subject=Consulta%20desde%20freyre.dev&body=Hola%20Einier%2C%0A%0AMi%20nombre%20es%20...%0AEmpresa%3A%20...%0A%0A%C2%BFQu%C3%A9%20problema%20necesito%20resolver%3F%0A..." class="btn btn-primary btn-large">Enviar mensaje</a>
+      <form class="contact-form" action="https://formspree.io/f/mpqgyygl" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo contacto desde freyre.dev" />
+        <input type="text" name="_gotcha" style="display:none" />
+        <div class="form-row">
+          <input type="text" name="nombre" placeholder="Tu nombre" required />
+          <input type="email" name="email" placeholder="Tu correo" required />
+        </div>
+        <input type="text" name="empresa" placeholder="Empresa (opcional)" />
+        <textarea name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto o qué necesitas resolver..." required></textarea>
+        <button type="submit" class="btn btn-primary btn-large">Enviar mensaje</button>
+      </form>
       <div class="contact-links">
         <a href="mailto:freyre.dev@gmail.com" class="contact-link">freyre.dev@gmail.com</a>
         <a href="https://www.linkedin.com/in/einier-freyre-896981220/" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
