@@ -44,16 +44,16 @@
     mouse.y = e.clientY
   })
 
-  const COUNT = 70
+  const COUNT = 220
   particles = []
 
   for (let i = 0; i < COUNT; i++) {
     particles.push({
       x: Math.random() * w,
       y: Math.random() * h,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-      r: Math.random() * 1.5 + 0.5
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      r: Math.random() * 2 + 0.8
     })
   }
 
@@ -72,8 +72,10 @@
         p.vy += (dy / dist) * force * 0.3
       }
 
-      p.vx *= 0.98
-      p.vy *= 0.98
+      p.vx += (Math.random() - 0.5) * 0.04
+      p.vy += (Math.random() - 0.5) * 0.04
+      p.vx *= 0.99
+      p.vy *= 0.99
       p.x += p.vx
       p.y += p.vy
 
