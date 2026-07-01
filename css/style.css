@@ -759,6 +759,31 @@ body {
   align-self: stretch;
 }
 
+.checkbox-privacy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.checkbox-privacy input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.checkbox-privacy a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.checkbox-privacy a:hover {
+  text-decoration: underline;
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
