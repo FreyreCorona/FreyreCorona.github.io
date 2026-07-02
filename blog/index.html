@@ -75,21 +75,26 @@
 
   <section class="section" style="padding-top:0">
     <div class="container" style="max-width:720px">
-      <div class="service-card reveal reveal-delay-1" style="margin-bottom:16px">
+      <a href="/blog/kubernetes-operator-kubebuilder.html" class="service-card reveal reveal-delay-1" style="margin-bottom:16px;display:block;text-decoration:none;color:inherit">
         <h3 style="margin-bottom:4px">Building a Kubernetes Operator in Go with Kubebuilder</h3>
-        <span style="font-size:12px;color:var(--text-muted)">Próximamente</span>
+        <span style="font-size:12px;color:var(--text-muted)">Jul 2, 2026 · 8 min</span>
         <p style="margin-top:12px">Walkthrough sobre cómo crear un operador personalizado, implementar CRDs, finalizers y leader election.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-2" style="margin-bottom:16px">
+      </a>
+      <a href="/blog/migrando-iac-terraform.html" class="service-card reveal reveal-delay-2" style="margin-bottom:16px;display:block;text-decoration:none;color:inherit">
         <h3 style="margin-bottom:4px">De 5 días a 1 hora: migrando a Infrastructure as Code</h3>
-        <span style="font-size:12px;color:var(--text-muted)">Próximamente</span>
+        <span style="font-size:12px;color:var(--text-muted)">Jul 2, 2026 · 7 min</span>
         <p style="margin-top:12px">Cómo Terraform + Cloud Init transformaron nuestro provisioning y las lecciones aprendidas.</p>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
+      </a>
+      <a href="/blog/observabilidad-prometheus-grafana.html" class="service-card reveal reveal-delay-3" style="margin-bottom:16px;display:block;text-decoration:none;color:inherit">
         <h3 style="margin-bottom:4px">Observabilidad sin presupuesto: Prometheus + Grafana para equipos pequeños</h3>
-        <span style="font-size:12px;color:var(--text-muted)">Próximamente</span>
+        <span style="font-size:12px;color:var(--text-muted)">Jul 2, 2026 · 6 min</span>
         <p style="margin-top:12px">Guía práctica para montar monitoreo en producción sin gastar de más.</p>
-      </div>
+      </a>
+      <a href="/blog/goroutines-pprof-memory-leaks-data-races.html" class="service-card reveal reveal-delay-4" style="margin-bottom:16px;display:block;text-decoration:none;color:inherit">
+        <h3 style="margin-bottom:4px">Uso correcto de Goroutines con pprof: Memory Leaks y Data Races</h3>
+        <span style="font-size:12px;color:var(--text-muted)">Jul 2, 2026 · 9 min</span>
+        <p style="margin-top:12px">Guía para el uso correcto de Goroutines en Go, detección de memory leaks con pprof y eliminación de data races con el race detector.</p>
+      </a>
     </div>
   </section>
 
@@ -109,5 +114,17 @@
   </footer>
 
   <script src="/js/main.js"></script>
+  <script>
+    ;(function() {
+      var lang = localStorage.getItem('lang')
+      if (!lang || lang === 'es') return
+      document.querySelectorAll('.service-card').forEach(function(el) {
+        var href = el.getAttribute('href')
+        if (href && href.indexOf('?lang=') === -1) {
+          el.setAttribute('href', href + '?lang=' + lang)
+        }
+      })
+    })()
+  </script>
 </body>
 </html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>De 5 días a 1 hora: migrando a Infrastructure as Code – Einier Freyre</title>
+  <meta name="description" content="Cómo Terraform + Cloud Init transformaron nuestro provisioning y las lecciones aprendidas en la migración de infraestructura manual a Infrastructure as Code." />
+  <meta property="og:title" content="De 5 días a 1 hora: migrando a Infrastructure as Code – Einier Freyre" />
+  <meta property="og:description" content="Cómo Terraform + Cloud Init transformaron nuestro provisioning y las lecciones aprendidas." />
+  <meta property="og:url" content="https://freyre.dev/blog/migrando-iac-terraform.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_LA" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .blog-post { padding: 120px 0 60px; max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+    .blog-post h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; line-height: 1.2; }
+    .blog-post .meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .blog-post .meta span { display: flex; align-items: center; gap: 4px; }
+    .blog-post h2 { font-size: 22px; font-weight: 700; margin: 40px 0 12px; color: var(--text); }
+    .blog-post h3 { font-size: 18px; font-weight: 600; margin: 28px 0 8px; color: var(--text); }
+    .blog-post p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+    .blog-post strong { color: var(--text); }
+    .blog-post code { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; background: var(--accent-subtle); padding: 2px 6px; border-radius: 4px; color: var(--accent); }
+    .blog-post pre { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; overflow-x: auto; margin-bottom: 20px; }
+    .blog-post pre code { background: none; padding: 0; color: var(--text); font-size: 13px; line-height: 1.6; }
+    .blog-post ul, .blog-post ol { padding-left: 20px; margin-bottom: 16px; }
+    .blog-post li { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 4px; }
+    .blog-post a { color: var(--accent); text-decoration: none; }
+    .blog-post a:hover { text-decoration: underline; }
+    .blog-post .tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-subtle); padding: 4px 12px; border-radius: 20px; margin-right: 6px; margin-bottom: 6px; border: 1px solid rgba(99,102,241,0.15); }
+    .blog-post .divider { height: 1px; background: var(--border); margin: 48px 0; }
+    .blog-post .highlight { background: var(--bg-card); border-left: 3px solid var(--accent); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 20px; }
+    .blog-post .highlight p { margin-bottom: 0; font-size: 14px; }
+    @media (max-width: 768px) { .blog-post { padding: 100px 0 40px; } }
+  </style>
+</head>
+<body>
+  <canvas id="networkCanvas"></canvas>
+  <div class="noise-overlay"></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Freyre — inicio">
+        <svg class="logo-svg" viewBox="0 0 152 32" height="28" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#6366f1"/>
+              <stop offset="100%" stop-color="#a78bfa"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="32" height="32" rx="7" fill="url(#lg)"/>
+          <text x="16" y="22" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">F</text>
+          <text x="42" y="23" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="currentColor" letter-spacing="-0.3">Freyre</text>
+        </svg>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="/" class="nav-link">Inicio</a>
+        <a href="/#services" class="nav-link">Servicios</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/#contact" class="nav-link btn-nav">Contacto</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <div class="lang-selector">
+        <button class="lang-current" aria-haspopup="true" aria-expanded="false">ES<svg class="lang-arrow" width="8" height="8" viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3l2 2 2-2"/></svg></button>
+        <div class="lang-dropdown">
+          <a href="/" class="lang-option" data-lang="es">ES — Español</a>
+          <a href="/pt/" class="lang-option" data-lang="pt">PT — Português</a>
+          <a href="/en/" class="lang-option" data-lang="en">EN — English</a>
+        </div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+    <article class="blog-post">
+    <div class="container" style="max-width:720px">
+      <div class="reveal active">
+        <div style="margin-bottom:16px" id="blog-tags">
+        </div>
+        <h1 id="blog-title"></h1>
+        <div class="meta" id="blog-meta">
+        </div>
+      </div>
+
+      <div class="reveal active reveal-delay-1" id="blog-body">
+      </div>
+
+      <div class="reveal active reveal-delay-1">
+        <div class="divider"></div>
+        <a href="/blog/" class="btn btn-secondary" style="display:inline-flex">&larr; Volver al blog</a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-nav">
+        <a href="/">Inicio</a>
+        <a href="/blog/">Blog</a>
+        <a href="/privacy.html">Privacidad</a>
+        <a href="/terms.html">Términos</a>
+      </div>
+      <div class="footer-meta">
+        <span>&copy; 2026 Freyre</span>
+        <a href="mailto:freyre.dev@gmail.com">freyre.dev@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/blog/js/blog-i18n.js"></script>
+</body>
+</html>

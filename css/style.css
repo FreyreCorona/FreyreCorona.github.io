@@ -943,6 +943,7 @@ body {
 .legal-page {
   padding: 120px 0 60px;
   max-width: 720px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
