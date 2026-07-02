@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Einier Freyre – Cloud & Platform Engineering</title>
+  <meta name="description" content="Consultoria Cloud, DevOps e Platform Engineering para SMBs na América Latina. Auditorias de infraestrutura, automação CI/CD, Kubernetes e redução de custos Cloud. Diagnóstico inicial sem custo." />
+  <meta property="og:title" content="Einier Freyre – Cloud & Platform Engineering" />
+  <meta property="og:description" content="Consultoria Cloud, DevOps e Platform Engineering para SMBs na América Latina. Automação, Kubernetes e redução de custos. Diagnóstico inicial sem custo." />
+  <meta property="og:url" content="https://freyre.dev/pt/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Einier Freyre – Cloud & Platform Engineering" />
+  <meta name="twitter:description" content="Consultoria Cloud, DevOps e Platform Engineering para SMBs na América Latina. Automação, Kubernetes e redução de custos. Diagnóstico inicial sem custo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <meta property="og:image" content="https://freyre.dev/images/og-default.svg" />
+  <meta name="twitter:image" content="https://freyre.dev/images/og-default.svg" />
+  <link rel="alternate" hreflang="es" href="https://freyre.dev/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://freyre.dev/pt/" />
+  <link rel="alternate" hreflang="x-default" href="https://freyre.dev/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Einier Freyre",
+    "jobTitle": "Platform Engineer",
+    "email": "freyre.dev@gmail.com",
+    "url": "https://freyre.dev",
+    "sameAs": [
+      "https://www.linkedin.com/in/einier-freyre-896981220/",
+      "https://github.com/FreyreCorona"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Cloud & Platform Engineering",
+    "provider": {
+      "@type": "Person",
+      "name": "Einier Freyre"
+    },
+    "description": "Automação de plataformas e infraestruturas Cloud: auditorias, implementação DevOps e Platform Engineering fracional para SMBs.",
+    "areaServed": "LATAM",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/OnlineOnly"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <canvas id="networkCanvas"></canvas>
+  <div class="noise-overlay"></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Freyre — início">
+        <svg class="logo-svg" viewBox="0 0 152 32" height="28" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#6366f1"/>
+              <stop offset="100%" stop-color="#a78bfa"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="32" height="32" rx="7" fill="url(#lg)"/>
+          <text x="16" y="22" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#fff" text-anchor="middle">F</text>
+          <text x="42" y="23" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="currentColor" letter-spacing="-0.3">Freyre</text>
+        </svg>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about" class="nav-link">Sobre mim</a>
+        <a href="#problems" class="nav-link">Problemas</a>
+        <a href="#services" class="nav-link">Serviços</a>
+        <a href="#process" class="nav-link">Processo</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-link btn-nav">Contato</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Mudar tema">
+        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">Platform Engineer · Cloud & DevOps · LATAM</div>
+      <h1 class="hero-title">Cloud &amp; <span class="gradient-text">Platform Engineering</span></h1>
+      <p class="hero-subtitle">
+        Seu time faz deploy em minutos, sua fatura Cloud cai até 35%
+        e sua infraestrutura deixa de ser uma dor de cabeça.
+      </p>
+      <div class="tech-badges">
+        <span class="tech-badge">Go</span>
+        <span class="tech-badge">Terraform</span>
+        <span class="tech-badge">Kubernetes</span>
+        <span class="tech-badge">OCI</span>
+        <span class="tech-badge">AWS</span>
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">CI/CD</span>
+        <span class="tech-badge">Prometheus</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Diagnóstico gratuito</a>
+        <a href="#services" class="btn btn-secondary">Ver serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section section-alt">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-photo reveal">
+          <img src="/images/avatar.png" alt="Einier Freyre" class="avatar" />
+        </div>
+        <div>
+          <div class="reveal">
+            <h2 class="section-label">Sobre mim</h2>
+            <p class="about-text-lg">
+              Tenho <strong>6+ anos</strong> transformando infraestrutura Cloud para startups e SMBs na <strong>América Latina</strong>.
+              Trabalho como <strong>Platform Engineer fracional</strong>: mais econômico que uma consultoria grande,
+              mais experiente que um interno júnior. Sem burocracia, sem jargão desnecessário,
+              com <strong>entregas visíveis desde a primeira semana</strong>.
+            </p>
+          </div>
+          <div class="about-grid reveal reveal-delay-1">
+            <div class="about-item">
+              <span class="about-num">6+</span>
+              <span class="about-desc">anos em Cloud · Platform Engineering · DevOps</span>
+            </div>
+            <div class="about-item">
+              <span class="about-num">100%</span>
+              <span class="about-desc">remoto · LATAM · Inglês / Português</span>
+            </div>
+            <div class="about-item">
+              <span class="about-num">Fracional</span>
+              <span class="about-desc">Modelo acessível para SMBs · Sem mínimo de horas</span>
+            </div>
+            <div class="about-item">
+              <span class="about-num">IaC</span>
+              <span class="about-desc">GitOps · Prometheus · CI/CD · Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problems" class="section">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-label">Problemas que resolvo</h2>
+        <p class="section-desc">
+          Se algo disso te soa familiar, podemos te ajudar:
+        </p>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-card reveal reveal-delay-1">
+          <span class="problem-icon">01</span>
+          <h3>Deploys lentos</h3>
+          <p>Deployar leva horas ou dias. O processo é manual, propenso a erros e ninguém quer fazer.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-2">
+          <span class="problem-icon">02</span>
+          <h3>Tarefas manuais repetitivas</h3>
+          <p>Seu time perde tempo configurando servidores, atualizando dependências e apagando incêndios.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-3">
+          <span class="problem-icon">03</span>
+          <h3>Custos Cloud sem controle</h3>
+          <p>A fatura cresce todo mês e ninguém sabe exatamente por quê. Recursos subutilizados e sem visibilidade.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-2">
+          <span class="problem-icon">04</span>
+          <h3>Infraestrutura invisível</h3>
+          <p>Ninguém entende completamente a infraestrutura. Documentação inexistente, configuração dispersa.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-3">
+          <span class="problem-icon">05</span>
+          <h3>Medo de deployar</h3>
+          <p>Dá medo fazer deploy em produção. Não há rollbacks confiáveis, não há testes, não há confiança.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-4">
+          <span class="problem-icon">06</span>
+          <h3>Time travado em operações</h3>
+          <p>O time técnico passa mais tempo operando do que construindo. O progresso parece lento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-label">Serviços</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/></svg>
+          </div>
+          <h3>Auditoria Cloud</h3>
+          <p>Revisão completa da sua infraestrutura, identificação de riscos, vazamentos de custos e recomendações acionáveis.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7V17C4 18.1046 4.89543 19 6 19H18C19.1046 19 20 18.1046 20 17V7M4 7L12 13L20 7M4 7C4 5.89543 4.89543 5 6 5H18C19.1046 5 20 5.89543 20 7"/></svg>
+          </div>
+          <h3>Implementação DevOps</h3>
+          <p>CI/CD, automação, observabilidade, contêineres e Kubernetes. Seu time faz deploy com confiança e em minutos.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12H15M9 16H15M9 8H15M7 3H17C18.1046 3 19 3.89543 19 5V21L12 18L5 21V5C5 3.89543 5.89543 3 7 3Z"/></svg>
+          </div>
+          <h3>Platform Engineering Fracional</h3>
+          <p>Acompanhamento contínuo, melhorias de plataforma, suporte estratégico e evolução da infraestrutura.</p>
+        </div>
+      </div>
+      <div class="hero-cta reveal reveal-delay-3" style="margin-top:48px;justify-content:center">
+        <a href="#contact" class="btn btn-primary">Agendar diagnóstico gratuito</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-label">Como trabalho</h2>
+      </div>
+      <div class="process-steps reveal reveal-delay-1">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Conversa inicial</h3>
+          <p>Sem custo nem compromisso. Entendo sua situação, suas dores e o que você precisa alcançar.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Diagnóstico</h3>
+          <p>Revisão da sua infraestrutura, processos e fluxos atuais. Identifico oportunidades de melhoria concretas.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Proposta</h3>
+          <p>Apresento um plano claro com escopo, prazos e investimento. Sem surpresas.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <h3>Implementação</h3>
+          <p>Construo, automatizo e documento. Trabalho iterativamente com entregas visíveis desde a primeira semana.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">5</span>
+          <h3>Acompanhamento</h3>
+          <p>Treinamento da sua equipe e suporte contínuo. A plataforma fica operacional e seu time autônomo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-label">Casos de Sucesso</h2>
+      </div>
+      <div class="testimonials-grid reveal reveal-delay-1">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>Passamos de criar e configurar nossos servidores manualmente para criá-los e configurá-los automaticamente em 15 minutos. A infraestrutura agora é tratada como código e nosso time pode focar em construir, não em operar.</p>
+          </div>
+          <div class="testimonial-author">
+            <span class="author-name">— David Ocampo</span>
+            <span class="author-role">CEO · Colmena Tech</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>A auditoria Cloud revelou vazamentos de custos que ninguém havia identificado. Otimizamos recursos, reduzimos a fatura em 35% e ganhamos visibilidade total da nossa infraestrutura.</p>
+          </div>
+          <div class="testimonial-author">
+            <span class="author-name">— Humberto</span>
+            <span class="author-role">CTO · Ciberiuz</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>Passamos de deployar a cada 2 semanas para fazer várias vezes ao dia. O tempo de provisioning caiu de 3 dias para 20 minutos e o time recuperou a confiança para lançar mudanças em produção.</p>
+          </div>
+          <div class="testimonial-author">
+            <span class="author-name">— Ana María</span>
+            <span class="author-role">Tech Lead · Kiwibot</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-cta reveal reveal-delay-2" style="margin-top:48px;justify-content:center">
+        <a href="#contact" class="btn btn-primary">Pronto para resultados semelhantes? →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog-preview" class="section">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-label">Blog</h2>
+        <p class="section-desc">
+          Notas sobre Platform Engineering, Cloud Infrastructure e DevOps na América Latina.
+        </p>
+      </div>
+      <div class="services-grid reveal reveal-delay-1">
+        <div class="service-card" style="cursor:default">
+          <h3>Building a Kubernetes Operator in Go with Kubebuilder</h3>
+          <p style="margin-top:8px">Walkthrough sobre CRDs, finalizers e leader election.</p>
+        </div>
+        <div class="service-card" style="cursor:default">
+          <h3>De 5 dias a 1 hora: migrando para Infrastructure as Code</h3>
+          <p style="margin-top:8px">Terraform + Cloud Init e lições aprendidas no caminho.</p>
+        </div>
+        <div class="service-card" style="cursor:default">
+          <h3>Observabilidade sem orçamento: Prometheus + Grafana</h3>
+          <p style="margin-top:8px">Monitoramento em produção para equipes pequenas sem gastar muito.</p>
+        </div>
+      </div>
+      <div class="hero-cta" style="margin-top:32px;justify-content:center">
+        <a href="/blog/" class="btn btn-secondary">Ver todos os artigos →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="container contact-content">
+      <div class="reveal">
+        <h2 class="section-label">Contato</h2>
+        <p class="contact-text">
+          Me conte o que você precisa e preparo uma proposta sob medida.
+          A conversa inicial é gratuita e sem compromisso.
+        </p>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="hidden" name="_subject" value="Novo contato do freyre.dev" />
+        <input type="text" name="_gotcha" style="display:none" />
+        <div class="form-row">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+        </div>
+        <input type="text" name="empresa" placeholder="Empresa (opcional)" />
+        <textarea name="mensagem" rows="5" placeholder="Me conte sobre seu projeto ou o que precisa resolver..." required></textarea>
+        <label class="checkbox-privacy">
+          <input type="checkbox" name="privacidade" value="aceita" required />
+          <span>Aceito a <a href="/privacy.html" target="_blank">política de privacidade</a></span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-large">Solicitar proposta</button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/></svg>
+        </div>
+        <h3 class="form-success-title">Mensagem enviada!</h3>
+        <p class="form-success-text">Obrigado por escrever. Responderei em breve para agendar uma conversa sem custo nem compromisso.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:freyre.dev@gmail.com" class="contact-link">freyre.dev@gmail.com</a>
+        <a href="https://www.linkedin.com/in/einier-freyre-896981220/" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+        <a href="https://github.com/FreyreCorona" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-nav">
+        <a href="/pt/">Início</a>
+        <a href="/blog/">Blog</a>
+        <a href="/privacy.html">Privacidade</a>
+        <a href="/terms.html">Termos</a>
+      </div>
+      <div class="footer-meta">
+        <span>&copy; 2026 Freyre</span>
+        <a href="mailto:freyre.dev@gmail.com">freyre.dev@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
