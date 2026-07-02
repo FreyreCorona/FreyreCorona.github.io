@@ -484,6 +484,20 @@ body {
   line-height: 1.5;
 }
 
+.about-lang {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.about-lang strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* Problems */
 .problems-grid {
   display: grid;
