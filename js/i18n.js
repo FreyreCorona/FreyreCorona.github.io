@@ -66,6 +66,9 @@
 
         const body = document.getElementById('blog-body')
         if (body) body.innerHTML = data.content
+
+        const langCurrent = document.getElementById('lang-current')
+        if (langCurrent) langCurrent.textContent = lang.toUpperCase()
       })
       .catch(err => console.error('i18n:', err))
   } else {
