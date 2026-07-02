@@ -171,14 +171,25 @@
     revealEls.forEach(el => el.classList.add('active'))
   }
 
-  // Language selector
-  document.querySelectorAll('.lang-link').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault()
+  // Language dropdown toggle
+  const langSelector = document.querySelector('.lang-selector')
+  const langBtn = langSelector?.querySelector('.lang-current')
+  if (langSelector && langBtn) {
+    langBtn.addEventListener('click', e => {
+      e.stopPropagation()
+      langSelector.classList.toggle('open')
+    })
+    document.addEventListener('click', () => langSelector.classList.remove('open'))
+    langSelector.querySelector('.lang-dropdown')?.addEventListener('click', e => {
+      e.stopPropagation()
+    })
+  }
+
+  // Language option click — save preference
+  document.querySelectorAll('.lang-option').forEach(link => {
+    link.addEventListener('click', () => {
       const lang = link.dataset.lang
-      localStorage.setItem('lang', lang)
-      const paths = { es: '/', pt: '/pt/', en: '/en/' }
-      window.location.href = paths[lang] || '/'
+      if (lang) localStorage.setItem('lang', lang)
     })
   })
 })()
