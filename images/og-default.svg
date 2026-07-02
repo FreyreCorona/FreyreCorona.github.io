@@ -4,52 +4,24 @@
       <stop offset="0%" stop-color="#0a0a0f"/>
       <stop offset="100%" stop-color="#0e0e18"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="fglow" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#6366f1"/>
       <stop offset="100%" stop-color="#a78bfa"/>
     </linearGradient>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.02"/>
-    </linearGradient>
-    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-    </linearGradient>
   </defs>
 
-  <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <!-- Glow accents -->
-  <ellipse cx="250" cy="315" rx="350" ry="250" fill="url(#glow)"/>
-  <ellipse cx="950" cy="315" rx="300" ry="200" fill="url(#glow)"/>
+  <rect x="560" y="215" width="80" height="80" rx="16" fill="url(#fglow)" opacity="0.12"/>
+  <text x="600" y="272" font-family="Arial, sans-serif" font-size="46" font-weight="bold" fill="url(#fglow)" text-anchor="middle">F</text>
 
-  <!-- Subtle grid lines -->
-  <line x1="0" y1="315" x2="1200" y2="315" stroke="url(#line)" stroke-width="1"/>
-  <line x1="0" y1="210" x2="1200" y2="210" stroke="#1a1a2e" stroke-width="0.5" opacity="0.5"/>
-  <line x1="0" y1="420" x2="1200" y2="420" stroke="#1a1a2e" stroke-width="0.5" opacity="0.5"/>
+  <text x="600" y="340" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#e8e8ed" text-anchor="middle" letter-spacing="-0.5">Freyre</text>
 
-  <!-- Monogram F box -->
-  <rect x="110" y="205" width="60" height="60" rx="12" fill="url(#accent)" opacity="0.12"/>
-  <text x="140" y="247" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="url(#accent)" text-anchor="middle">F</text>
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="24" fill="#6366f1" text-anchor="middle" letter-spacing="0.5">Cloud &amp; Platform Engineering</text>
 
-  <!-- Freyre text -->
-  <text x="190" y="248" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" fill="#e8e8ed" letter-spacing="-0.5">Freyre</text>
+  <rect x="560" y="435" width="80" height="2" rx="1" fill="#6366f1" opacity="0.3"/>
 
-  <!-- Tagline -->
-  <text x="140" y="310" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#6366f1" letter-spacing="0.3">Cloud &amp; Platform Engineering</text>
+  <text x="600" y="480" font-family="Arial, sans-serif" font-size="16" fill="#7a7a9e" text-anchor="middle">Cloud Automation · DevOps · Kubernetes · Cost Reduction</text>
 
-  <!-- Description -->
-  <text x="140" y="360" font-family="Inter, Arial, sans-serif" font-size="16" fill="#7a7a9e">Cloud Automation · DevOps · Kubernetes · Cost Reduction</text>
-
-  <!-- Divider -->
-  <rect x="140" y="400" width="60" height="2" rx="1" fill="#6366f1" opacity="0.4"/>
-
-  <!-- Bottom info -->
-  <text x="140" y="440" font-family="Inter, Arial, sans-serif" font-size="13" fill="#4a4a6e">Consulting for SMBs in LATAM · Free initial diagnostic</text>
-
-  <!-- URL -->
-  <text x="140" y="470" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#6366f1" opacity="0.6">freyre.dev</text>
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#6366f1" opacity="0.5" text-anchor="middle">freyre.dev</text>
 </svg>
