@@ -969,6 +969,40 @@ body {
   line-height: 1.8;
 }
 
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.lang-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.lang-link:hover {
+  color: var(--text);
+}
+
+.lang-sep {
+  color: var(--border-hover);
+  font-size: 10px;
+}
+
+.lang-switcher[data-current="es"] .lang-link[data-lang="es"],
+.lang-switcher[data-current="pt"] .lang-link[data-lang="pt"],
+.lang-switcher[data-current="en"] .lang-link[data-lang="en"] {
+  color: var(--accent);
+  cursor: default;
+  pointer-events: none;
+}
+
 /* Theme Toggle */
 .theme-toggle {
   display: flex;
@@ -1052,6 +1086,10 @@ body {
 
   .theme-toggle {
     margin-right: 4px;
+  }
+
+  .lang-switcher {
+    display: none;
   }
 
   .form-row {
