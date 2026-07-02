@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "htmlLang": "pt",
+    "title": "Privacidade – Einier Freyre",
+    "description": "Política de privacidade do site freyre.dev."
+  },
+  "nav": {
+    "about": "Sobre mim",
+    "services": "Serviços",
+    "blog": "Blog",
+    "contact": "Contato"
+  },
+  "themeToggle": "Mudar tema",
+  "menuToggle": "Menu",
+  "langCurrent": "PT",
+  "content": {
+    "title": "Política de Privacidade",
+    "date": "Última atualização: Julho 2026",
+    "s1h": "Informações que coleto",
+    "s1b": "Quando você entra em contato através do formulário ou e-mail, coleto as informações que você fornece: nome, e-mail, empresa e a mensagem enviada.",
+    "s2h": "Uso das informações",
+    "s2b": "<p>Utilizo suas informações apenas para:</p><ul><li>Responder às suas consultas</li><li>Preparar propostas de serviços</li><li>Comunicações relacionadas a projetos</li></ul><p>Não compartilho suas informações com terceiros nem as uso para marketing não solicitado.</p>",
+    "s3h": "Cookies",
+    "s3b": "Este site não utiliza cookies de rastreamento. O GitHub Pages pode gerar logs de acesso anônimos que não estão sob meu controle.",
+    "s4h": "Seus direitos",
+    "s4b": "Você pode solicitar a exclusão dos seus dados a qualquer momento escrevendo para <a href=\"mailto:freyre.dev@gmail.com\">freyre.dev@gmail.com</a>."
+  },
+  "footerNav": [
+    { "text": "Início", "url": "/" },
+    { "text": "Blog", "url": "/blog/" },
+    { "text": "Privacidade", "url": "/privacy.html" },
+    { "text": "Termos", "url": "/terms.html" }
+  ]
+}

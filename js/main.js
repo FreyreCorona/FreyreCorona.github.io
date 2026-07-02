@@ -6,11 +6,11 @@
     if (path !== '/' && path !== '/index.html') return
     if (saved) return
     const browserLang = (navigator.language || '').slice(0, 2).toLowerCase()
-    const targets = { pt: '/pt/', en: '/en/' }
-    const target = targets[browserLang]
-    if (target) {
-      localStorage.setItem('lang', browserLang)
-      window.location.href = target
+    const targets = { pt: 'pt', en: 'en' }
+    const targetLang = targets[browserLang]
+    if (targetLang) {
+      localStorage.setItem('lang', targetLang)
+      window.location.href = '/?lang=' + targetLang
     }
   })()
 

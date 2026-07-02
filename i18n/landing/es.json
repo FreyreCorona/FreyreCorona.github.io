@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "htmlLang": "es",
+    "title": "Einier Freyre – Cloud & Platform Engineering",
+    "description": "Consultoría Cloud, DevOps y Platform Engineering para SMBs en LATAM. Auditorías de infraestructura, automatización CI/CD, Kubernetes y reducción de costos Cloud. Diagnóstico inicial sin costo.",
+    "ogTitle": "Einier Freyre – Cloud & Platform Engineering",
+    "ogDescription": "Consultoría Cloud, DevOps y Platform Engineering para SMBs en LATAM. Automatización, Kubernetes y reducción de costos. Diagnóstico inicial sin costo.",
+    "ogLocale": "es_ES"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "problems": "Problemas",
+    "services": "Servicios",
+    "process": "Proceso",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "themeToggle": "Cambiar tema",
+  "menuToggle": "Menú",
+  "langCurrent": "ES",
+  "hero": {
+    "badge": "Platform Engineer · Cloud & DevOps · LATAM",
+    "title": "Cloud &amp; <span class=\"gradient-text\">Platform Engineering</span>",
+    "subtitle": "Tu equipo deploya en minutos, tu factura Cloud baja hasta un 35% y tu infraestructura deja de ser un dolor de cabeza.",
+    "ctaPrimary": "Diagnóstico gratuito",
+    "ctaSecondary": "Ver servicios"
+  },
+  "about": {
+    "sectionLabel": "Sobre mí",
+    "text": "Llevo <strong>6+ años</strong> construyendo software backend para startups y SMBs en <strong>LATAM</strong> — desde liderazgo técnico hasta Cloud y DevOps. Trabajo como <strong>Platform Engineer fraccional</strong>: más económico que una consultora grande, más experto que un interno junior. Sin burocracia, sin jerga innecesaria, con <strong>entregas visibles desde la primera semana</strong>.",
+    "grid": [
+      { "num": "6+", "desc": "años en Backend · Cloud · DevOps" },
+      { "num": "100%", "desc": "remoto · LATAM · ES / PT / EN" },
+      { "num": "Fraccional", "desc": "Modelo accesible para SMBs · Sin mínimo de horas" },
+      { "num": "IaC", "desc": "GitOps · Prometheus · CI/CD · Docker" }
+    ],
+    "langNote": "🌐 Disponible para atenderte en <strong>español</strong> o <strong>inglés</strong>."
+  },
+  "problems": {
+    "sectionLabel": "Problemas que resuelvo",
+    "desc": "Si algo de esto te suena familiar, podemos ayudarte:",
+    "cards": [
+      { "num": "01", "title": "Despliegues lentos", "desc": "Deployar toma horas o días. El proceso es manual, propenso a errores y nadie quiere hacerlo." },
+      { "num": "02", "title": "Backend frágil", "desc": "APIs sin documentación, microservicios enredados, errores imposibles de rastrear. El backend frena el producto." },
+      { "num": "03", "title": "Costos Cloud sin control", "desc": "La factura crece cada mes y nadie sabe exactamente por qué. Recursos infrautilizados y sin visibilidad." },
+      { "num": "04", "title": "Deuda técnica estancada", "desc": "Sin tests, sin patrones, cada cambio es un riesgo. El equipo evita refactorizar y la deuda crece." },
+      { "num": "05", "title": "Miedo a desplegar", "desc": "Da miedo hacer deploy en producción. No hay rollbacks confiables, no hay tests, no hay confianza." },
+      { "num": "06", "title": "Equipo atascado en operaciones", "desc": "El equipo técnico pasa más tiempo operando que construyendo. El progreso se siente lento." }
+    ]
+  },
+  "services": {
+    "sectionLabel": "Servicios",
+    "cards": [
+      { "title": "Auditoría Cloud", "desc": "Revisión completa de tu infraestructura, identificación de riesgos, fugas de costos y recomendaciones accionables." },
+      { "title": "Arquitectura Backend", "desc": "APIs, microservicios y diseño de sistemas. Desde revisión de código hasta arquitectura completa con Go, patrones sólidos y buenas prácticas." },
+      { "title": "Implementación DevOps", "desc": "CI/CD, automatización, observabilidad, contenedores y Kubernetes. Tu equipo deploya con confianza y en minutos." },
+      { "title": "Platform Engineering Fraccional", "desc": "Acompañamiento continuo, mejoras de plataforma, soporte estratégico y evolución de la infraestructura." }
+    ],
+    "cta": "Agendar diagnóstico gratuito"
+  },
+  "process": {
+    "sectionLabel": "Cómo trabajo",
+    "steps": [
+      { "num": "1", "title": "Conversación inicial", "desc": "Sin costo ni compromiso. Entiendo tu situación, tus dolores y lo que necesitas lograr." },
+      { "num": "2", "title": "Diagnóstico", "desc": "Revisión de tu infraestructura, procesos y flujos actuales. Identifico oportunidades de mejora concretas." },
+      { "num": "3", "title": "Propuesta", "desc": "Te presento un plan claro con alcance, tiempos e inversión. Sin sorpresas." },
+      { "num": "4", "title": "Implementación", "desc": "Construyo, automatizo y documento. Trabajo iterativamente con entregas visibles desde la primera semana." },
+      { "num": "5", "title": "Seguimiento", "desc": "Capacitación a tu equipo y acompañamiento. La plataforma queda operativa y tu equipo autónomo." }
+    ]
+  },
+  "testimonials": {
+    "sectionLabel": "Casos de Éxito",
+    "cards": [
+      { "text": "Pasamos de crear y configurar nuestros servidores manualmente a crearlos y configurarlos automáticamente en 15 minutos. La infraestructura ahora es tratada como código y nuestro equipo puede enfocarse en construir, no en operar.", "author": "— David Ocampo", "role": "CEO · Colmena Tech" },
+      { "text": "La auditoría Cloud reveló fugas de costos que nadie había identificado. Optimizamos recursos, redujimos la factura en un 35% y ganamos visibilidad total de nuestra infraestructura.", "author": "— Humberto", "role": "CTO · Ciberiuz" },
+      { "text": "El software que Einier desarrolló para nuestra academia eliminó los errores en el control de pagos y vencimientos de alumnos. Ahora notificamos automáticamente y el equipo administrativo recuperó horas que antes perdíamos en planillas.", "author": "— Athletica Academia", "role": "Dirección" }
+    ],
+    "cta": "¿Listo para resultados similares? →"
+  },
+  "blog": {
+    "sectionLabel": "Blog",
+    "desc": "Notas sobre Platform Engineering, Cloud Infrastructure y DevOps en LATAM.",
+    "cards": [
+      { "title": "Building a Kubernetes Operator in Go with Kubebuilder", "desc": "Walkthrough sobre CRDs, finalizers y leader election.", "url": "/blog/kubernetes-operator-kubebuilder.html" },
+      { "title": "De 5 días a 1 hora: migrando a Infrastructure as Code", "desc": "Terraform + Cloud Init y lecciones aprendidas en el camino.", "url": "/blog/migrando-iac-terraform.html" },
+      { "title": "Observabilidad sin presupuesto: Prometheus + Grafana", "desc": "Monitoreo en producción para equipos pequeños sin gastar de más.", "url": "/blog/observabilidad-prometheus-grafana.html" },
+      { "title": "Uso correcto de Goroutines con pprof: Memory Leaks y Data Races", "desc": "Guía para el uso correcto de Goroutines en Go, detección de memory leaks con pprof y eliminación de data races.", "url": "/blog/goroutines-pprof-memory-leaks-data-races.html" }
+    ],
+    "cta": "Ver todos los artículos →"
+  },
+  "contact": {
+    "sectionLabel": "Contacto",
+    "text": "Cuéntame qué necesitas y te preparo una propuesta a medida. La conversación inicial es gratis y sin compromiso.",
+    "form": {
+      "subject": "Nuevo contacto desde freyre.dev",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "Tu correo",
+      "companyPlaceholder": "Empresa (opcional)",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto o qué necesitas resolver...",
+      "privacyHtml": "Acepto la <a href=\"/privacy.html\" target=\"_blank\">política de privacidad</a>",
+      "submitText": "Solicitar propuesta"
+    },
+    "successTitle": "¡Mensaje enviado!",
+    "successText": "Gracias por escribirme. Te responderé a la brevedad para coordinar una conversación sin costo ni compromiso."
+  },
+  "footerNav": [
+    { "text": "Inicio", "url": "/" },
+    { "text": "Blog", "url": "/blog/" },
+    { "text": "Privacidad", "url": "/privacy.html" },
+    { "text": "Términos", "url": "/terms.html" }
+  ]
+}

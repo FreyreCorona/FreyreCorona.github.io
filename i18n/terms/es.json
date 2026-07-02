@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "htmlLang": "es",
+    "title": "Términos – Einier Freyre",
+    "description": "Términos y condiciones de los servicios de consultoría Cloud, DevOps y Platform Engineering."
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "themeToggle": "Cambiar tema",
+  "menuToggle": "Menú",
+  "langCurrent": "ES",
+  "content": {
+    "title": "Términos y Condiciones",
+    "date": "Última actualización: Julio 2026",
+    "s1h": "Servicios",
+    "s1b": "Ofrezco servicios de consultoría en Cloud Infrastructure, DevOps y Platform Engineering. El alcance, entregables y cronograma de cada proyecto se definen en una propuesta firmada por ambas partes.",
+    "s2h": "Propiedad intelectual",
+    "s2b": "Todo el código, configuraciones y documentación desarrollados durante un proyecto son entregados al cliente. No existe lock-in ni dependencia contractual después de finalizar el proyecto.",
+    "s3h": "Confidencialidad",
+    "s3b": "Toda la información compartida durante la relación contractual se trata como confidencial y no se divulga a terceros.",
+    "s4h": "Limitación de responsabilidad",
+    "s4b": "Los servicios se prestan \"tal cual\". No me hago responsable por daños indirectos derivados del uso de las implementaciones realizadas.",
+    "s5h": "Contacto",
+    "s5b": "Para cualquier consulta sobre estos términos, escribe a <a href=\"mailto:freyre.dev@gmail.com\">freyre.dev@gmail.com</a>."
+  },
+  "footerNav": [
+    { "text": "Inicio", "url": "/" },
+    { "text": "Blog", "url": "/blog/" },
+    { "text": "Privacidad", "url": "/privacy.html" },
+    { "text": "Términos", "url": "/terms.html" }
+  ]
+}

@@ -21,10 +21,6 @@
   <link rel="stylesheet" href="/css/style.css" />
   <meta property="og:image" content="https://freyre.dev/images/og-default.svg" />
   <meta name="twitter:image" content="https://freyre.dev/images/og-default.svg" />
-  <link rel="alternate" hreflang="es" href="https://freyre.dev/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://freyre.dev/pt/" />
-  <link rel="alternate" hreflang="en" href="https://freyre.dev/en/" />
-  <link rel="alternate" hreflang="x-default" href="https://freyre.dev/" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -78,29 +74,29 @@
         </svg>
       </a>
       <nav class="nav" id="nav">
-        <a href="#about" class="nav-link">Sobre mí</a>
-        <a href="#problems" class="nav-link">Problemas</a>
-        <a href="#services" class="nav-link">Servicios</a>
-        <a href="#process" class="nav-link">Proceso</a>
-        <a href="/blog/" class="nav-link">Blog</a>
-        <a href="#contact" class="nav-link btn-nav">Contacto</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">Sobre mí</a>
+        <a href="#problems" class="nav-link" data-i18n="nav.problems">Problemas</a>
+        <a href="#services" class="nav-link" data-i18n="nav.services">Servicios</a>
+        <a href="#process" class="nav-link" data-i18n="nav.process">Proceso</a>
+        <a href="/blog/" class="nav-link" data-i18n="nav.blog">Blog</a>
+        <a href="#contact" class="nav-link btn-nav" data-i18n="nav.contact">Contacto</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+      <button class="theme-toggle" id="themeToggle" data-i18n-aria="themeToggle" aria-label="Cambiar tema">
         <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
         <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
       </button>
       <div class="lang-selector">
         <button class="lang-current" aria-haspopup="true" aria-expanded="false">
-          ES
+          <span data-i18n="langCurrent">ES</span>
           <svg class="lang-arrow" width="8" height="8" viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3l2 2 2-2"/></svg>
         </button>
         <div class="lang-dropdown">
-          <a href="/" class="lang-option" data-lang="es">ES — Español</a>
-          <a href="/pt/" class="lang-option" data-lang="pt">PT — Português</a>
-          <a href="/en/" class="lang-option" data-lang="en">EN — English</a>
+          <a href="/?lang=es" class="lang-option" data-lang="es">ES — Español</a>
+          <a href="/?lang=pt" class="lang-option" data-lang="pt">PT — Português</a>
+          <a href="/?lang=en" class="lang-option" data-lang="en">EN — English</a>
         </div>
       </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <button class="menu-toggle" id="menuToggle" data-i18n-aria="menuToggle" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -108,9 +104,9 @@
 
   <section class="hero">
     <div class="container hero-content">
-      <div class="hero-badge">Platform Engineer · Cloud & DevOps · LATAM</div>
-      <h1 class="hero-title">Cloud &amp; <span class="gradient-text">Platform Engineering</span></h1>
-      <p class="hero-subtitle">
+      <div class="hero-badge" data-i18n="hero.badge">Platform Engineer · Cloud & DevOps · LATAM</div>
+      <h1 class="hero-title" data-i18n-html="hero.title">Cloud &amp; <span class="gradient-text">Platform Engineering</span></h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
         Tu equipo deploya en minutos, tu factura Cloud baja hasta un 35%
         y tu infraestructura deja de ser un dolor de cabeza.
       </p>
@@ -125,8 +121,8 @@
         <span class="tech-badge">Prometheus</span>
       </div>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Diagnóstico gratuito</a>
-        <a href="#services" class="btn btn-secondary">Ver servicios</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Diagnóstico gratuito</a>
+        <a href="#services" class="btn btn-secondary" data-i18n="hero.ctaSecondary">Ver servicios</a>
       </div>
     </div>
   </section>
@@ -139,15 +135,15 @@
         </div>
         <div>
           <div class="reveal">
-            <h2 class="section-label">Sobre mí</h2>
-            <p class="about-text-lg">
+            <h2 class="section-label" data-i18n="about.sectionLabel">Sobre mí</h2>
+            <p class="about-text-lg" data-i18n-html="about.text">
               Llevo <strong>6+ años</strong> construyendo software backend para startups y SMBs en <strong>LATAM</strong> — desde liderazgo técnico hasta Cloud y DevOps.
               Trabajo como <strong>Platform Engineer fraccional</strong>: más económico que una consultora grande,
               más experto que un interno junior. Sin burocracia, sin jerga innecesaria,
               con <strong>entregas visibles desde la primera semana</strong>.
             </p>
           </div>
-          <div class="about-grid reveal reveal-delay-1">
+          <div class="about-grid reveal reveal-delay-1" id="about-grid">
             <div class="about-item">
               <span class="about-num">6+</span>
               <span class="about-desc">años en Backend · Cloud · DevOps</span>
@@ -165,7 +161,7 @@
               <span class="about-desc">GitOps · Prometheus · CI/CD · Docker</span>
             </div>
           </div>
-          <p class="about-lang reveal reveal-delay-2">🌐 Disponible para atenderte en <strong>español</strong> o <strong>inglés</strong>.</p>
+          <p class="about-lang reveal reveal-delay-2" data-i18n-html="about.langNote">🌐 Disponible para atenderte en <strong>español</strong> o <strong>inglés</strong>.</p>
         </div>
       </div>
     </div>
@@ -174,12 +170,12 @@
   <section id="problems" class="section">
     <div class="container">
       <div class="reveal">
-        <h2 class="section-label">Problemas que resuelvo</h2>
-        <p class="section-desc">
+        <h2 class="section-label" data-i18n="problems.sectionLabel">Problemas que resuelvo</h2>
+        <p class="section-desc" data-i18n="problems.desc">
           Si algo de esto te suena familiar, podemos ayudarte:
         </p>
       </div>
-      <div class="problems-grid">
+      <div class="problems-grid" id="problems-grid">
         <div class="problem-card reveal reveal-delay-1">
           <span class="problem-icon">01</span>
           <h3>Despliegues lentos</h3>
@@ -217,9 +213,9 @@
   <section id="services" class="section section-alt">
     <div class="container">
       <div class="reveal">
-        <h2 class="section-label">Servicios</h2>
+        <h2 class="section-label" data-i18n="services.sectionLabel">Servicios</h2>
       </div>
-      <div class="services-grid">
+      <div class="services-grid" id="services-grid">
         <div class="service-card reveal reveal-delay-1">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/></svg>
@@ -250,7 +246,7 @@
         </div>
       </div>
       <div class="hero-cta reveal reveal-delay-4" style="margin-top:48px;justify-content:center">
-        <a href="#contact" class="btn btn-primary">Agendar diagnóstico gratuito</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="services.cta">Agendar diagnóstico gratuito</a>
       </div>
     </div>
   </section>
@@ -258,9 +254,9 @@
   <section id="process" class="section">
     <div class="container">
       <div class="reveal">
-        <h2 class="section-label">Cómo trabajo</h2>
+        <h2 class="section-label" data-i18n="process.sectionLabel">Cómo trabajo</h2>
       </div>
-      <div class="process-steps reveal reveal-delay-1">
+      <div class="process-steps reveal reveal-delay-1" id="process-steps">
         <div class="step">
           <span class="step-num">1</span>
           <h3>Conversación inicial</h3>
@@ -293,9 +289,9 @@
   <section id="testimonials" class="section">
     <div class="container">
       <div class="reveal">
-        <h2 class="section-label">Casos de Éxito</h2>
+        <h2 class="section-label" data-i18n="testimonials.sectionLabel">Casos de Éxito</h2>
       </div>
-      <div class="testimonials-grid reveal reveal-delay-1">
+      <div class="testimonials-grid reveal reveal-delay-1" id="testimonials-grid">
         <div class="testimonial-card">
           <div class="testimonial-content">
             <p>Pasamos de crear y configurar nuestros servidores manualmente a crearlos y configurarlos automáticamente en 15 minutos. La infraestructura ahora es tratada como código y nuestro equipo puede enfocarse en construir, no en operar.</p>
@@ -325,7 +321,7 @@
         </div>
       </div>
       <div class="hero-cta reveal reveal-delay-2" style="margin-top:48px;justify-content:center">
-        <a href="#contact" class="btn btn-primary">¿Listo para resultados similares? →</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="testimonials.cta">¿Listo para resultados similares? →</a>
       </div>
     </div>
   </section>
@@ -333,12 +329,12 @@
   <section id="blog-preview" class="section">
     <div class="container">
       <div class="reveal">
-        <h2 class="section-label">Blog</h2>
-        <p class="section-desc">
+        <h2 class="section-label" data-i18n="blog.sectionLabel">Blog</h2>
+        <p class="section-desc" data-i18n="blog.desc">
           Notas sobre Platform Engineering, Cloud Infrastructure y DevOps en LATAM.
         </p>
       </div>
-      <div class="services-grid reveal reveal-delay-1">
+      <div class="services-grid reveal reveal-delay-1" id="blog-grid">
         <a href="/blog/kubernetes-operator-kubebuilder.html" class="service-card" style="text-decoration:none;color:inherit">
           <h3>Building a Kubernetes Operator in Go with Kubebuilder</h3>
           <p style="margin-top:8px">Walkthrough sobre CRDs, finalizers y leader election.</p>
@@ -357,7 +353,7 @@
         </a>
       </div>
       <div class="hero-cta" style="margin-top:32px;justify-content:center">
-        <a href="/blog/" class="btn btn-secondary">Ver todos los artículos →</a>
+        <a href="/blog/" class="btn btn-secondary" data-i18n="blog.cta">Ver todos los artículos →</a>
       </div>
     </div>
   </section>
@@ -365,33 +361,33 @@
   <section id="contact" class="section section-alt">
     <div class="container contact-content">
       <div class="reveal">
-        <h2 class="section-label">Contacto</h2>
-        <p class="contact-text">
+        <h2 class="section-label" data-i18n="contact.sectionLabel">Contacto</h2>
+        <p class="contact-text" data-i18n="contact.text">
           Cuéntame qué necesitas y te preparo una propuesta a medida.
           La conversación inicial es gratis y sin compromiso.
         </p>
       </div>
       <form class="contact-form" id="contactForm">
-        <input type="hidden" name="_subject" value="Nuevo contacto desde freyre.dev" />
+        <input type="hidden" name="_subject" data-i18n-value="contact.form.subject" value="Nuevo contacto desde freyre.dev" />
         <input type="text" name="_gotcha" style="display:none" />
         <div class="form-row">
-          <input type="text" name="nombre" placeholder="Tu nombre" required />
-          <input type="email" name="email" placeholder="Tu correo" required />
+          <input type="text" name="nombre" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Tu nombre" required />
+          <input type="email" name="email" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="Tu correo" required />
         </div>
-        <input type="text" name="empresa" placeholder="Empresa (opcional)" />
-        <textarea name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto o qué necesitas resolver..." required></textarea>
+        <input type="text" name="empresa" data-i18n-placeholder="contact.form.companyPlaceholder" placeholder="Empresa (opcional)" />
+        <textarea name="mensaje" rows="5" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Cuéntame sobre tu proyecto o qué necesitas resolver..." required></textarea>
         <label class="checkbox-privacy">
           <input type="checkbox" name="privacidad" value="aceptada" required />
-          <span>Acepto la <a href="/privacy.html" target="_blank">política de privacidad</a></span>
+          <span data-i18n-html="contact.form.privacyHtml">Acepto la <a href="/privacy.html" target="_blank">política de privacidad</a></span>
         </label>
-        <button type="submit" class="btn btn-primary btn-large">Solicitar propuesta</button>
+        <button type="submit" class="btn btn-primary btn-large" data-i18n="contact.form.submitText">Solicitar propuesta</button>
       </form>
       <div class="form-success" id="formSuccess">
         <div class="form-success-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/></svg>
         </div>
-        <h3 class="form-success-title">¡Mensaje enviado!</h3>
-        <p class="form-success-text">Gracias por escribirme. Te responderé a la brevedad para coordinar una conversación sin costo ni compromiso.</p>
+        <h3 class="form-success-title" data-i18n="contact.successTitle">¡Mensaje enviado!</h3>
+        <p class="form-success-text" data-i18n="contact.successText">Gracias por escribirme. Te responderé a la brevedad para coordinar una conversación sin costo ni compromiso.</p>
       </div>
       <div class="contact-links">
         <a href="mailto:freyre.dev@gmail.com" class="contact-link">freyre.dev@gmail.com</a>
@@ -403,7 +399,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-nav">
+      <div class="footer-nav" id="footer-nav">
         <a href="/">Inicio</a>
         <a href="/blog/">Blog</a>
         <a href="/privacy.html">Privacidad</a>
@@ -417,17 +413,6 @@
   </footer>
 
   <script src="/js/main.js"></script>
-  <script>
-    ;(function() {
-      var lang = localStorage.getItem('lang')
-      if (!lang || lang === 'es') return
-      document.querySelectorAll('#blog-preview .service-card').forEach(function(el) {
-        var href = el.getAttribute('href')
-        if (href && href.indexOf('?lang=') === -1) {
-          el.setAttribute('href', href + '?lang=' + lang)
-        }
-      })
-    })()
-  </script>
+  <script src="/js/page-i18n.js"></script>
 </body>
 </html>
