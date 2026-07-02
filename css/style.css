@@ -107,6 +107,12 @@ body {
   text-decoration: none;
   letter-spacing: -1px;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logo-svg {
+  display: block;
 }
 
 .logo::after {
