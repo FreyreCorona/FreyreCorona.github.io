@@ -1,4 +1,19 @@
 ;(() => {
+  // Language redirect (root only, respects manual choice)
+  ;(() => {
+    const saved = localStorage.getItem('lang')
+    const path = window.location.pathname.replace(/\/$/, '') || '/'
+    if (path !== '/' && path !== '/index.html') return
+    if (saved) return
+    const browserLang = (navigator.language || '').slice(0, 2).toLowerCase()
+    const targets = { pt: '/pt/', en: '/en/' }
+    const target = targets[browserLang]
+    if (target) {
+      localStorage.setItem('lang', browserLang)
+      window.location.href = target
+    }
+  })()
+
   const toggle = document.getElementById('menuToggle')
   const nav = document.getElementById('nav')
   if (toggle && nav) {
@@ -155,4 +170,15 @@
   } else {
     revealEls.forEach(el => el.classList.add('active'))
   }
+
+  // Language selector
+  document.querySelectorAll('.lang-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault()
+      const lang = link.dataset.lang
+      localStorage.setItem('lang', lang)
+      const paths = { es: '/', pt: '/pt/', en: '/en/' }
+      window.location.href = paths[lang] || '/'
+    })
+  })
 })()
