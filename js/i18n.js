@@ -81,6 +81,12 @@
           if (v !== null) el.setAttribute('aria-label', v)
         })
 
+        const whatsappFab = document.querySelector('.whatsapp-fab')
+        if (whatsappFab && d.whatsappMessage) {
+          const base = whatsappFab.href.split('?')[0]
+          whatsappFab.href = base + '?text=' + encodeURIComponent(d.whatsappMessage)
+        }
+
         const aboutGrid = document.getElementById('about-grid')
         if (aboutGrid && d.about?.grid) {
           aboutGrid.innerHTML = d.about.grid.map(item =>
