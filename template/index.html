@@ -47,8 +47,8 @@
       </a>
       <nav class="nav" id="nav">
         <a href="#about" class="nav-link">{{t:nav.about}}</a>
-        <a href="#problems" class="nav-link">{{t:nav.problems}}</a>
         <a href="#services" class="nav-link">{{t:nav.services}}</a>
+        <a href="#packages" class="nav-link">{{t:nav.packages}}</a>
         <a href="#process" class="nav-link">{{t:nav.process}}</a>
         <a href="#contact" class="nav-link btn-nav">{{t:nav.contact}}</a>
       </nav>
@@ -89,7 +89,7 @@
         <span class="tech-badge">Prometheus</span>
       </div>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">{{t:hero.ctaPrimary}}</a>
+        <a href="#packages" class="btn btn-primary">{{t:hero.ctaPrimary}}</a>
         <a href="#services" class="btn btn-secondary">{{t:hero.ctaSecondary}}</a>
       </div>
     </div>
@@ -135,7 +135,18 @@
     </div>
   </section>
 
-  <section id="process" class="section">
+  <section id="packages" class="section">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-label">{{t:packages.sectionLabel}}</h2>
+        <p class="section-desc">{{t:packages.desc}}</p>
+      </div>
+      <div class="packages-grid" id="packages-grid">{{PACKAGES_CARDS}}</div>
+      <p class="packages-footnote reveal reveal-delay-4">{{t:packages.footnote}}</p>
+    </div>
+  </section>
+
+  <section id="process" class="section section-alt">
     <div class="container">
       <div class="reveal">
         <h2 class="section-label">{{t:process.sectionLabel}}</h2>

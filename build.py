@@ -154,6 +154,53 @@ def render_blocks(template, data):
             )
         template = template.replace("{{ABOUT_GRID}}", "".join(cards))
 
+    packages = lookup(data, "packages")
+    if packages:
+        popular = esc(packages.get("popular", ""))
+        cta_label = esc(packages.get("cta", ""))
+        cards = []
+        for i, item in enumerate(packages.get("cards", [])):
+            highlight = item.get("highlight", False)
+            classes = f"package-card reveal reveal-delay-{i + 1}"
+            if highlight:
+                classes += " package-card--featured"
+
+            # Price block: a one-off price, or (for retainers) the monthly fee
+            # shown prominently with the setup as a secondary note.
+            if item.get("monthly"):
+                price_html = f'<span class="package-price">{esc(item["monthly"])}</span>'
+                if item.get("setup"):
+                    price_html += (
+                        f'<span class="package-price-suffix">{esc(item["setup"])}</span>'
+                    )
+            else:
+                price_html = f'<span class="package-price">{esc(item.get("price", ""))}</span>'
+
+            features = "".join(
+                f'<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+                f'stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">'
+                f'<path d="M20 6L9 17L4 12"/></svg>{esc(f)}</li>'
+                for f in item.get("features", [])
+            )
+
+            badge = (
+                f'<span class="package-badge">{popular}</span>' if highlight else ""
+            )
+            cards.append(
+                f'<div class="{classes}">'
+                f"{badge}"
+                f'<h3 class="package-name">{esc(item.get("name", ""))}</h3>'
+                f'<p class="package-tagline">{esc(item.get("tagline", ""))}</p>'
+                f'<div class="package-pricing">{price_html}'
+                f'<span class="package-note">{esc(item.get("note", ""))}</span></div>'
+                f'<ul class="package-features">{features}</ul>'
+                f'<a class="btn btn-primary package-cta" '
+                f'href="#contact" data-package="{esc(item.get("id", ""))}">'
+                f"{cta_label}</a>"
+                "</div>"
+            )
+        template = template.replace("{{PACKAGES_CARDS}}", "".join(cards))
+
     return template
 
 

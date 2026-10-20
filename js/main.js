@@ -126,13 +126,36 @@
 
   const contactForm = document.getElementById('contactForm')
   const formSuccess = document.getElementById('formSuccess')
+
+  // UI strings for the form feedback, keyed by the language in the URL.
+  const FORM_STRINGS = {
+    es: { sending: 'Enviando...', error: 'Ocurrió un error. Intenta nuevamente o escríbeme directamente a freyre.dev@gmail.com' },
+    pt: { sending: 'Enviando...', error: 'Ocorreu um erro. Tente novamente ou escreva diretamente para freyre.dev@gmail.com' },
+    en: { sending: 'Sending...', error: 'Something went wrong. Please try again or email me directly at freyre.dev@gmail.com' }
+  }
+  const formLang = (window.location.pathname.match(/^\/(es|pt|en)(\/|$)/) || [])[1] || 'es'
+  const formStrings = FORM_STRINGS[formLang] || FORM_STRINGS.es
+
+  // Clicking a package card prefills the message so the lead arrives qualified.
+  document.querySelectorAll('.package-cta[data-package]').forEach(link => {
+    link.addEventListener('click', () => {
+      const card = link.closest('.package-card')
+      const name = card?.querySelector('.package-name')?.textContent?.trim()
+      const textarea = contactForm?.querySelector('textarea[name="mensaje"]')
+      if (name && textarea && !textarea.value.trim()) {
+        const prefix = { es: 'Me interesa el paquete', pt: 'Tenho interesse no pacote', en: "I'm interested in the" }[formLang] || 'Me interesa el paquete'
+        textarea.value = `${prefix} ${name}.`
+      }
+    })
+  })
+
   if (contactForm && formSuccess) {
     contactForm.addEventListener('submit', async e => {
       e.preventDefault()
       const btn = contactForm.querySelector('button[type="submit"]')
       const originalText = btn.textContent
       btn.disabled = true
-      btn.textContent = 'Enviando...'
+      btn.textContent = formStrings.sending
       try {
         const data = new FormData(contactForm)
         data.append('_gotcha', '')
@@ -147,7 +170,7 @@
       } catch {
         btn.disabled = false
         btn.textContent = originalText
-        alert('Ocurrió un error. Intenta nuevamente o escríbeme directamente a freyre.dev@gmail.com')
+        alert(formStrings.error)
       }
     })
   }

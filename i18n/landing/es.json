@@ -2,15 +2,15 @@
   "meta": {
     "htmlLang": "es",
     "title": "Einier Freyre – Cloud & Platform Engineering",
-    "description": "Consultoría Cloud, DevOps y Platform Engineering para SMBs en LATAM. Auditorías de infraestructura, automatización CI/CD, Kubernetes y reducción de costos Cloud. Diagnóstico inicial sin costo.",
+    "description": "Consultoría Cloud, DevOps y Platform Engineering para SMBs en LATAM. Monitoreo, backups, CI/CD y reducción de costos Cloud. Paquetes con precio fijo.",
     "ogTitle": "Einier Freyre – Cloud & Platform Engineering",
-    "ogDescription": "Consultoría Cloud, DevOps y Platform Engineering para SMBs en LATAM. Automatización, Kubernetes y reducción de costos. Diagnóstico inicial sin costo.",
+    "ogDescription": "Consultoría Cloud, DevOps y Platform Engineering para SMBs en LATAM. Paquetes con precio claro: diagnóstico, deploy y operación mensual.",
     "ogLocale": "es_ES"
   },
   "nav": {
     "about": "Sobre mí",
-    "problems": "Problemas",
     "services": "Servicios",
+    "packages": "Paquetes",
     "process": "Proceso",
     "contact": "Contacto"
   },
@@ -24,64 +24,199 @@
     "badge": "Platform Engineer · Cloud & DevOps · LATAM",
     "title": "Cloud &amp; <span class=\"gradient-text\">Platform Engineering</span>",
     "subtitle": "Tu equipo deploya en minutos, tu factura Cloud baja hasta un 35% y tu infraestructura deja de ser un dolor de cabeza.",
-    "ctaPrimary": "Diagnóstico gratuito",
+    "ctaPrimary": "Ver paquetes",
     "ctaSecondary": "Ver servicios"
   },
   "about": {
     "sectionLabel": "Sobre mí",
     "text": "Llevo <strong>6+ años</strong> construyendo software backend para startups y SMBs en <strong>LATAM</strong> — desde liderazgo técnico hasta Cloud y DevOps. Trabajo como <strong>Platform Engineer fraccional</strong>: más económico que una consultora grande, más experto que un interno junior. Sin burocracia, sin jerga innecesaria, con <strong>entregas visibles desde la primera semana</strong>.",
     "grid": [
-      { "num": "6+", "desc": "años en Backend · Cloud · DevOps" },
-      { "num": "100%", "desc": "remoto · LATAM · ES / PT / EN" },
-      { "num": "Fraccional", "desc": "Modelo accesible para SMBs · Sin mínimo de horas" },
-      { "num": "IaC", "desc": "GitOps · Prometheus · CI/CD · Docker" }
+      {
+        "num": "6+",
+        "desc": "años en Backend · Cloud · DevOps"
+      },
+      {
+        "num": "100%",
+        "desc": "remoto · LATAM · ES / PT / EN"
+      },
+      {
+        "num": "Fraccional",
+        "desc": "Modelo accesible para SMBs · Sin mínimo de horas"
+      },
+      {
+        "num": "IaC",
+        "desc": "GitOps · Prometheus · CI/CD · Docker"
+      }
     ],
-    "langNote": "🌐 Disponible para atenderte en <strong>español</strong> o <strong>inglés</strong>."
+    "langNote": "🌐 Disponible para atenderte en <strong>español</strong>, <strong>portugués</strong> o <strong>inglés</strong>."
   },
   "problems": {
     "sectionLabel": "Problemas que resuelvo",
     "desc": "Si algo de esto te suena familiar, podemos ayudarte:",
     "cards": [
-      { "num": "01", "title": "Despliegues lentos", "desc": "Deployar toma horas o días. El proceso es manual, propenso a errores y nadie quiere hacerlo." },
-      { "num": "02", "title": "Backend frágil", "desc": "APIs sin documentación, microservicios enredados, errores imposibles de rastrear. El backend frena el producto." },
-      { "num": "03", "title": "Costos Cloud sin control", "desc": "La factura crece cada mes y nadie sabe exactamente por qué. Recursos infrautilizados y sin visibilidad." },
-      { "num": "04", "title": "Deuda técnica estancada", "desc": "Sin tests, sin patrones, cada cambio es un riesgo. El equipo evita refactorizar y la deuda crece." },
-      { "num": "05", "title": "Miedo a desplegar", "desc": "Da miedo hacer deploy en producción. No hay rollbacks confiables, no hay tests, no hay confianza." },
-      { "num": "06", "title": "Equipo atascado en operaciones", "desc": "El equipo técnico pasa más tiempo operando que construyendo. El progreso se siente lento." }
+      {
+        "num": "01",
+        "title": "Despliegues lentos",
+        "desc": "Deployar toma horas o días. El proceso es manual, propenso a errores y nadie quiere hacerlo."
+      },
+      {
+        "num": "02",
+        "title": "Backend frágil",
+        "desc": "APIs sin documentación, microservicios enredados, errores imposibles de rastrear. El backend frena el producto."
+      },
+      {
+        "num": "03",
+        "title": "Costos Cloud sin control",
+        "desc": "La factura crece cada mes y nadie sabe exactamente por qué. Recursos infrautilizados y sin visibilidad."
+      },
+      {
+        "num": "04",
+        "title": "Deuda técnica estancada",
+        "desc": "Sin tests, sin patrones, cada cambio es un riesgo. El equipo evita refactorizar y la deuda crece."
+      },
+      {
+        "num": "05",
+        "title": "Miedo a desplegar",
+        "desc": "Da miedo hacer deploy en producción. No hay rollbacks confiables, no hay tests, no hay confianza."
+      },
+      {
+        "num": "06",
+        "title": "Equipo atascado en operaciones",
+        "desc": "El equipo técnico pasa más tiempo operando que construyendo. El progreso se siente lento."
+      }
     ]
   },
   "services": {
     "sectionLabel": "Servicios",
     "cards": [
-      { "title": "Auditoría Cloud", "desc": "Revisión completa de tu infraestructura, identificación de riesgos, fugas de costos y recomendaciones accionables." },
-      { "title": "Arquitectura Backend", "desc": "APIs, microservicios y diseño de sistemas. Desde revisión de código hasta arquitectura completa con Go, patrones sólidos y buenas prácticas." },
-      { "title": "Implementación DevOps", "desc": "CI/CD, automatización, observabilidad, contenedores y Kubernetes. Tu equipo deploya con confianza y en minutos." },
-      { "title": "Platform Engineering Fraccional", "desc": "Acompañamiento continuo, mejoras de plataforma, soporte estratégico y evolución de la infraestructura." }
+      {
+        "title": "Auditoría Cloud",
+        "desc": "Revisión completa de tu infraestructura, identificación de riesgos, fugas de costos y recomendaciones accionables."
+      },
+      {
+        "title": "Arquitectura Backend",
+        "desc": "APIs, microservicios y diseño de sistemas. Desde revisión de código hasta arquitectura completa con Go, patrones sólidos y buenas prácticas."
+      },
+      {
+        "title": "Implementación DevOps",
+        "desc": "CI/CD, automatización, observabilidad, contenedores y Kubernetes. Tu equipo deploya con confianza y en minutos."
+      },
+      {
+        "title": "Platform Engineering Fraccional",
+        "desc": "Acompañamiento continuo, mejoras de plataforma, soporte estratégico y evolución de la infraestructura."
+      }
     ],
-    "cta": "Agendar diagnóstico gratuito"
+    "cta": "Ver paquetes"
+  },
+  "packages": {
+    "sectionLabel": "Paquetes",
+    "desc": "Precios claros, alcance cerrado. Sin sorpresas ni cotizaciones eternas.",
+    "popular": "Más elegido",
+    "cta": "Quiero este paquete",
+    "cards": [
+      {
+        "id": "diagnostico",
+        "name": "Diagnóstico Cloud",
+        "tagline": "Para saber exactamente qué está mal y cuánto podés ahorrar.",
+        "price": "R$ 1.900",
+        "note": "proyecto único",
+        "features": [
+          "Revisión de infraestructura (AWS, OCI o VPS)",
+          "Auditoría de la factura de los últimos 3 meses",
+          "Revisión de seguridad, backups y puntos de falla",
+          "Informe con prioridades y ahorro estimado",
+          "Sesión de 60 min para presentar hallazgos"
+        ]
+      },
+      {
+        "id": "deploy",
+        "name": "Deploy Pipeline",
+        "tagline": "Para que tu equipo deploye en minutos y sin miedo.",
+        "price": "R$ 4.900",
+        "note": "proyecto único",
+        "features": [
+          "CI/CD automatizado con GitHub Actions",
+          "Contenedores y entornos de staging",
+          "Rollback confiable en un comando",
+          "Infraestructura como código con Terraform",
+          "Documentación + capacitación al equipo"
+        ]
+      },
+      {
+        "id": "ops",
+        "name": "Cloud Ops Mensal",
+        "tagline": "Yo me ocupo de tu infraestructura. Vos te ocupás del producto.",
+        "price": "",
+        "note": "plan Padrão",
+        "highlight": true,
+        "features": [
+          "Monitoreo 24/7 de uptime y recursos",
+          "Alertas a WhatsApp ante cualquier incidente",
+          "Backups automáticos y verificados",
+          "Actualizaciones de seguridad y SSL",
+          "Revisión mensual de costos Cloud",
+          "Soporte prioritario por WhatsApp"
+        ],
+        "monthly": "R$ 690/mês",
+        "setup": "+ R$ 1.200 de setup"
+      }
+    ],
+    "footnote": "El retainer arranca en R$ 490/mes para una sola aplicación. El plan avanzado llega a R$ 1.200/mes con mejoras continuas incluidas."
   },
   "process": {
     "sectionLabel": "Cómo trabajo",
     "steps": [
-      { "num": "1", "title": "Conversación inicial", "desc": "Sin costo ni compromiso. Entiendo tu situación, tus dolores y lo que necesitas lograr." },
-      { "num": "2", "title": "Diagnóstico", "desc": "Revisión de tu infraestructura, procesos y flujos actuales. Identifico oportunidades de mejora concretas." },
-      { "num": "3", "title": "Propuesta", "desc": "Te presento un plan claro con alcance, tiempos e inversión. Sin sorpresas." },
-      { "num": "4", "title": "Implementación", "desc": "Construyo, automatizo y documento. Trabajo iterativamente con entregas visibles desde la primera semana." },
-      { "num": "5", "title": "Seguimiento", "desc": "Capacitación a tu equipo y acompañamiento. La plataforma queda operativa y tu equipo autónomo." }
+      {
+        "num": "1",
+        "title": "Conversación inicial",
+        "desc": "Sin costo ni compromiso. Entiendo tu situación, tus dolores y lo que necesitas lograr."
+      },
+      {
+        "num": "2",
+        "title": "Diagnóstico",
+        "desc": "Revisión de tu infraestructura, procesos y flujos actuales. Identifico oportunidades de mejora concretas."
+      },
+      {
+        "num": "3",
+        "title": "Propuesta",
+        "desc": "Te presento un plan claro con alcance, tiempos e inversión. Sin sorpresas."
+      },
+      {
+        "num": "4",
+        "title": "Implementación",
+        "desc": "Construyo, automatizo y documento. Trabajo iterativamente con entregas visibles desde la primera semana."
+      },
+      {
+        "num": "5",
+        "title": "Seguimiento",
+        "desc": "Capacitación a tu equipo y acompañamiento. La plataforma queda operativa y tu equipo autónomo."
+      }
     ]
   },
   "testimonials": {
     "sectionLabel": "Casos de Éxito",
     "cards": [
-      { "text": "Pasamos de crear y configurar nuestros servidores manualmente a crearlos y configurarlos automáticamente en 15 minutos. La infraestructura ahora es tratada como código y nuestro equipo puede enfocarse en construir, no en operar.", "author": "— David Ocampo", "role": "CEO · Colmena Tech" },
-      { "text": "La auditoría Cloud reveló fugas de costos que nadie había identificado. Optimizamos recursos, redujimos la factura en un 35% y ganamos visibilidad total de nuestra infraestructura.", "author": "— Humberto", "role": "CTO · Ciberiuz" },
-      { "text": "El software que Einier desarrolló para nuestra academia eliminó los errores en el control de pagos y vencimientos de alumnos. Ahora notificamos automáticamente y el equipo administrativo recuperó horas que antes perdíamos en planillas.", "author": "— Athletica Academia", "role": "Dirección" }
+      {
+        "text": "Pasamos de crear y configurar nuestros servidores manualmente a crearlos y configurarlos automáticamente en 15 minutos. La infraestructura ahora es tratada como código y nuestro equipo puede enfocarse en construir, no en operar.",
+        "author": "— David Ocampo",
+        "role": "CEO · Colmena Tech"
+      },
+      {
+        "text": "La auditoría Cloud reveló fugas de costos que nadie había identificado. Optimizamos recursos, redujimos la factura en un 35% y ganamos visibilidad total de nuestra infraestructura.",
+        "author": "— Humberto",
+        "role": "CTO · Ciberiuz"
+      },
+      {
+        "text": "El software que Einier desarrolló para nuestra academia eliminó los errores en el control de pagos y vencimientos de alumnos. Ahora notificamos automáticamente y el equipo administrativo recuperó horas que antes perdíamos en planillas.",
+        "author": "— Athletica Academia",
+        "role": "Dirección"
+      }
     ],
     "cta": "¿Listo para resultados similares? →"
   },
   "contact": {
     "sectionLabel": "Contacto",
-    "text": "Cuéntame qué necesitas y te preparo una propuesta a medida. La conversación inicial es gratis y sin compromiso.",
+    "text": "Contame qué necesitás y te respondo con el paquete que mejor encaja con tu caso. Si ninguno aplica, te lo digo con franqueza.",
     "form": {
       "subject": "Nuevo contacto desde freyre.dev",
       "namePlaceholder": "Tu nombre",
@@ -92,11 +227,20 @@
       "submitText": "Solicitar propuesta"
     },
     "successTitle": "¡Mensaje enviado!",
-    "successText": "Gracias por escribirme. Te responderé a la brevedad para coordinar una conversación sin costo ni compromiso."
+    "successText": "Gracias por escribirme. Te responderé a la brevedad con el siguiente paso concreto."
   },
   "footerNav": [
-    { "text": "Inicio", "url": "/" },
-    { "text": "Privacidad", "url": "/privacy.html" },
-    { "text": "Términos", "url": "/terms.html" }
+    {
+      "text": "Inicio",
+      "url": "/"
+    },
+    {
+      "text": "Privacidad",
+      "url": "/privacy.html"
+    },
+    {
+      "text": "Términos",
+      "url": "/terms.html"
+    }
   ]
 }
