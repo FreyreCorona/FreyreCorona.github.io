@@ -219,6 +219,9 @@ Si preferís, te muestro los 3 paquetes que armé y me decís qué te parece.
 - ❌ Un audio de 3 minutos o un bloque de 15 líneas.
 - ❌ Pedir una llamada de 30 min en el primer mensaje.
 
+> **Variantes por tipo de prospecto y respuestas a objeciones:** ver
+> [`mensajes.md`](./mensajes.md).
+
 ---
 
 ## 5. Ruta desde cero (cero clientes → primer retainer)
