@@ -7,7 +7,6 @@
   "nav": {
     "about": "Sobre mim",
     "services": "Serviços",
-    "blog": "Blog",
     "contact": "Contato"
   },
   "themeToggle": "Mudar tema",
@@ -29,7 +28,6 @@
   },
   "footerNav": [
     { "text": "Início", "url": "/" },
-    { "text": "Blog", "url": "/blog/" },
     { "text": "Privacidade", "url": "/privacy.html" },
     { "text": "Termos", "url": "/terms.html" }
   ]

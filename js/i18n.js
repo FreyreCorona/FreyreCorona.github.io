@@ -37,41 +37,7 @@
   const lang = getLang()
   const { pathname } = window.location
 
-  if (pathname.startsWith('/blog/') && pathname !== '/blog/' && pathname !== '/blog/index.html') {
-    /* ── blog post ── */
-    const slug = pathname.split('/').pop().replace('.html', '')
-    if (!slug) return
-
-    fetchJSON('/blog/i18n/' + slug + '/' + lang + '.json', lang)
-      .then(data => {
-        document.title = data.meta.title + ' – Einier Freyre'
-
-        const desc = document.querySelector('meta[name="description"]')
-        if (desc) desc.content = data.meta.description
-
-        const ogTitle = document.querySelector('meta[property="og:title"]')
-        if (ogTitle) ogTitle.content = data.meta.ogTitle || data.meta.title
-
-        const ogDesc = document.querySelector('meta[property="og:description"]')
-        if (ogDesc) ogDesc.content = data.meta.ogDescription || data.meta.description
-
-        const tags = document.getElementById('blog-tags')
-        if (tags) tags.innerHTML = data.meta.tags.map(t => '<span class="tag">' + t + '</span>').join('')
-
-        const title = document.getElementById('blog-title')
-        if (title) title.textContent = data.meta.title
-
-        const meta = document.getElementById('blog-meta')
-        if (meta) meta.innerHTML = '<span>' + data.meta.date + '</span><span>·</span><span>' + data.meta.readTime + '</span>'
-
-        const body = document.getElementById('blog-body')
-        if (body) body.innerHTML = data.content
-
-        const langCurrent = document.getElementById('lang-current')
-        if (langCurrent) langCurrent.textContent = lang.toUpperCase()
-      })
-      .catch(err => console.error('i18n:', err))
-  } else {
+  {
     /* ── site page (landing, terms, privacy) ── */
     const page = (() => {
       const path = pathname.replace(/\/$/, '') || '/'
@@ -176,25 +142,6 @@
               '</div>' +
             '</div>'
           ).join('')
-        }
-
-        const blogGrid = document.getElementById('blog-grid')
-        if (blogGrid && d.blog?.cards) {
-          blogGrid.innerHTML = d.blog.cards.map(c =>
-            '<a href="' + c.url + '" class="service-card" style="text-decoration:none;color:inherit">' +
-              '<h3>' + c.title + '</h3>' +
-              '<p style="margin-top:8px">' + c.desc + '</p>' +
-            '</a>'
-          ).join('')
-          const currentLang = localStorage.getItem('lang') || 'es'
-          if (currentLang && currentLang !== 'es') {
-            blogGrid.querySelectorAll('a').forEach(el => {
-              var href = el.getAttribute('href')
-              if (href && href.indexOf('?lang=') === -1) {
-                el.setAttribute('href', href + '?lang=' + currentLang)
-              }
-            })
-          }
         }
 
         const footerNav = document.getElementById('footer-nav')

@@ -12,7 +12,6 @@
     "problems": "Problemas",
     "services": "Servicios",
     "process": "Proceso",
-    "blog": "Blog",
     "contact": "Contacto"
   },
   "themeToggle": "Cambiar tema",
@@ -77,17 +76,6 @@
     ],
     "cta": "¿Listo para resultados similares? →"
   },
-  "blog": {
-    "sectionLabel": "Blog",
-    "desc": "Notas sobre Platform Engineering, Cloud Infrastructure y DevOps en LATAM.",
-    "cards": [
-      { "title": "Building a Kubernetes Operator in Go with Kubebuilder", "desc": "Walkthrough sobre CRDs, finalizers y leader election.", "url": "/blog/kubernetes-operator-kubebuilder.html" },
-      { "title": "De 5 días a 1 hora: migrando a Infrastructure as Code", "desc": "Terraform + Cloud Init y lecciones aprendidas en el camino.", "url": "/blog/migrando-iac-terraform.html" },
-      { "title": "Observabilidad sin presupuesto: Prometheus + Grafana", "desc": "Monitoreo en producción para equipos pequeños sin gastar de más.", "url": "/blog/observabilidad-prometheus-grafana.html" },
-      { "title": "Uso correcto de Goroutines con pprof: Memory Leaks y Data Races", "desc": "Guía para el uso correcto de Goroutines en Go, detección de memory leaks con pprof y eliminación de data races.", "url": "/blog/goroutines-pprof-memory-leaks-data-races.html" }
-    ],
-    "cta": "Ver todos los artículos →"
-  },
   "contact": {
     "sectionLabel": "Contacto",
     "text": "Cuéntame qué necesitas y te preparo una propuesta a medida. La conversación inicial es gratis y sin compromiso.",
@@ -105,7 +93,6 @@
   },
   "footerNav": [
     { "text": "Inicio", "url": "/" },
-    { "text": "Blog", "url": "/blog/" },
     { "text": "Privacidad", "url": "/privacy.html" },
     { "text": "Términos", "url": "/terms.html" }
   ]

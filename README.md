@@ -12,7 +12,6 @@ HTML+CSS+JS estático. Sin frameworks, sin build tools.
 ├── index.html        # Landing principal
 ├── privacy.html      # Política de privacidad
 ├── terms.html        # Términos y condiciones
-├── blog/             # Blog (en construcción)
 ├── css/style.css     # Estilos globales
 ├── js/main.js        # Canvas red neuronal + animaciones + menú
 └── .opencode/        # Configuración de OpenCode AI

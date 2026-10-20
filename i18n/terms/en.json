@@ -7,7 +7,6 @@
   "nav": {
     "about": "About",
     "services": "Services",
-    "blog": "Blog",
     "contact": "Contact"
   },
   "themeToggle": "Toggle theme",
@@ -29,7 +28,6 @@
   },
   "footerNav": [
     { "text": "Home", "url": "/" },
-    { "text": "Blog", "url": "/blog/" },
     { "text": "Privacy", "url": "/privacy.html" },
     { "text": "Terms", "url": "/terms.html" }
   ]
