@@ -17,6 +17,8 @@
   "themeToggle": "Cambiar tema",
   "menuToggle": "Menú",
   "langCurrent": "ES",
+  "whatsappLabel": "WhatsApp",
+  "whatsappAria": "Escribir por WhatsApp",
   "hero": {
     "badge": "Platform Engineer · Cloud & DevOps · LATAM",
     "title": "Cloud &amp; <span class=\"gradient-text\">Platform Engineering</span>",
