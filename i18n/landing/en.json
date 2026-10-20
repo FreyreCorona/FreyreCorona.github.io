@@ -88,7 +88,7 @@
       "emailPlaceholder": "Your email",
       "companyPlaceholder": "Company (optional)",
       "messagePlaceholder": "Tell me about your project or what you need to solve...",
-      "privacyHtml": "I accept the <a href=\"/en/privacy.html\" target=\"_blank\">privacy policy</a>",
+      "privacyHtml": "I accept the <a href=\"/privacy.html\" target=\"_blank\">privacy policy</a>",
       "submitText": "Request a proposal"
     },
     "successTitle": "Message sent!",

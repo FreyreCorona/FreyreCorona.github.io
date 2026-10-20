@@ -1,16 +1,15 @@
 ;(() => {
-  // Language redirect (root only, respects manual choice)
+  // Remember the language of the page the visitor is actually viewing, so a
+  // later visit to the root "/" redirects them straight back here.
+  // The root itself is a standalone redirect page and does not load this file.
   ;(() => {
-    const saved = localStorage.getItem('lang')
-    const path = window.location.pathname.replace(/\/$/, '') || '/'
-    if (path !== '/' && path !== '/index.html') return
-    if (saved) return
-    const browserLang = (navigator.language || '').slice(0, 2).toLowerCase()
-    const targets = { pt: 'pt', en: 'en' }
-    const targetLang = targets[browserLang]
-    if (targetLang) {
-      localStorage.setItem('lang', targetLang)
-      window.location.href = '/?lang=' + targetLang
+    const match = window.location.pathname.match(/^\/(es|pt|en)(\/|$)/)
+    if (match) {
+      try {
+        localStorage.setItem('lang', match[1])
+      } catch (_) {
+        /* storage blocked (private mode) — the URL is enough */
+      }
     }
   })()
 
